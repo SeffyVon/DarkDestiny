@@ -20,7 +20,8 @@ This is a game developed in Java within 10 weeks with 3 other teammates: Han Jia
 
 ##How to run
 1. Change the JRE environment to Java 1.6_65 (**IMPORTANT**)
-2. Allocate at least 1 GB memory to your JVM (i.e.: Add "-Xms1024m -Xmx1024m" to your JVM argument) 
+2. Allocate at least 1 GB memory to your JVM (i.e.: Add "-Xms1024m -Xmx1024m" to your JVM argument)
+![Alt text](https://cloud.githubusercontent.com/assets/3908463/5157979/860e1a56-7324-11e4-9160-ebefef13ad25.png "Optional title")
 3. Click Run in your IDE, and choose the main class as com.darkdensity.main.Main
 
 ##Feature
