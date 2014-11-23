@@ -56,9 +56,14 @@ This is a game developed in Java within 10 weeks with 3 other teammates: Han Jia
 ##Game Control
 After entering the game world, the following controls would be:
 * **Select the Sprite/Building**: **Click** the sprite, or use your mouse to **drag a square** to enclose the sprites within the dragging square. If the selection is successful, the sprite would surrounded by yellow glows, and the status bar on the bottom of the user interface would show the sprite, or the first sprite being selected (if multiple sprites are selected).
-* **Control the Sprite**: After selection of the sprite, **right click** on the game world, the sprite would find them the way there.
+![Alt text](https://cloud.githubusercontent.com/assets/3908463/5158461/78eef49c-7335-11e4-8356-499698258a28.png "Selection Sprite/Building Panel 1") 
+
+* **Control the Sprite**: After selection of the sprite, **right click** on the game world, the sprite would find them the way there (implemeted by efficient path-finding algorithm).
+
 * **Add a barricade**: **Click** the construction icon ![Alt text](https://cloud.githubusercontent.com/assets/3908463/5158423/4b337f9c-7334-11e4-948c-b8d68682f024.png "construction icon")on the left of your User Interface, a barricade would appear in your mouse, simply add it to the place available. To see if a place is available for adding a barricade, just see the indicating color of the barricade.
+
 * **Scout a building**: **Select** a sprite and **right click** a building.
+![Alt text](https://cloud.githubusercontent.com/assets/3908463/5158458/78e698d8-7335-11e4-8ce3-f34be1c120f8.png "Selection Sprite/Building Panel 2")
 
 
 ##Efficient Path-Finding Algorithm
