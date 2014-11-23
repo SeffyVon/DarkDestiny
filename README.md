@@ -3,15 +3,14 @@ DarkDestiny
 
 ##Introduction
 
-This is a game developed in pure Java within 10 weeks with 3 other teammates: Han Jiang, Issac Lam Bowie Wong.
+This is a game developed in Java within 10 weeks with 3 other teammates: Han Jiang, Issac Lam and Hei Yin Wong.
 
-- Game name: Dark Destiny
-- Game type: Real Time Strategy game
-- Game theme: zombie-themed survival game
-- Language: Java
-- Development team: 4 people
-- Development time: 10 weeks
-- No additional library or game engine
+* Game name: Dark Destiny
+* Game type: Real Time Strategy game
+* Game theme: zombie-themed survival game
+* Language: Basic Java, without any additional library or game engine
+* Development team: 4 people
+* Development time: 10 weeks
 
 
 ##System requirement
