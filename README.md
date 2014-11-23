@@ -68,9 +68,9 @@ After entering the game world, the following controls would be:
 
 ##Efficient Path-Finding Algorithm
 Based on A* Algorithm, but we have some improvement on the performance:
-1. Insead of finding every tiles (in our game, one tile is 16px *16px) to the destination, we first found the crossroads we need to go to the destination.
-2. We smoothed the path where we don't neccessarily go to thoses crossing points, see the path on the testing. 
-3. When there was some changed on the path, e.g. a barricade is added to the path, the path would be changed accordingly. There is a path manager to manage all the pahts, and it listens to the change of the path all the time.
+* Insead of finding every tiles (in our game, one tile is 16px *16px) to the destination, we first found the crossroads we need to go to the destination.
+* We smoothed the path where we don't neccessarily go to thoses crossing points, see the path on the testing.
+* When there was some changed on the path, e.g. a barricade is added to the path, the path would be changed accordingly. There is a path manager to manage all the pahts, and it listens to the change of the path all the time.
 
 **Testing Output**
 
