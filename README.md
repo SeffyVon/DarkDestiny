@@ -45,7 +45,7 @@ This is a game developed in Java within 10 weeks with 3 other teammates: Han Jia
 
 * **Selection Sprite/Building Panel**:The sprite or building being selected.
 
-![Alt text](https://cloud.githubusercontent.com/assets/3908463/5158461/78eef49c-7335-11e4-8356-499698258a28.png "Selection Sprite/Building Panel 1")![Alt text](https://cloud.githubusercontent.com/assets/3908463/5158458/78e698d8-7335-11e4-8ce3-f34be1c120f8.png "Selection Sprite/Building Panel 2")
+![Alt text](https://cloud.githubusercontent.com/assets/3908463/5158461/78eef49c-7335-11e4-8356-499698258a28.png "Selection Sprite/Building Panel 1")   ![Alt text](https://cloud.githubusercontent.com/assets/3908463/5158458/78e698d8-7335-11e4-8ce3-f34be1c120f8.png "Selection Sprite/Building Panel 2")
 
 * **Time and Resources Indicator Panel**:The remaining time needed to survive in order to win. 
 ![Alt text](https://cloud.githubusercontent.com/assets/3908463/5158459/78e7eddc-7335-11e4-8f0e-8a95d2c105c8.png "Time and Resources Indicator Panel")
