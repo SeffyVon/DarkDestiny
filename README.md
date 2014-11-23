@@ -5,7 +5,7 @@ DarkDestiny
 
 ##Introduction
 
-This is a game developed in Java within 10 weeks with 3 other teammates: Han Jiang, Issac Lam and Hei Yin Wong.
+This is a game developed in Java within 10 weeks with 3 other teammates: Han Jiang(https://github.com/Han-Jiang), Issac Lam and Hei Yin Wong.
 
 * Game name: Dark Destiny
 * Game type: Real Time Strategy game
