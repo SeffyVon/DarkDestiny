@@ -80,7 +80,7 @@ Based on A* Algorithm, but we have some improvement on the performance:
 
 
 ##Demo Video
-Check out full one-minute game playing video on YouTube (http://youtu.be/1po4sz6yDoU) or check out this project on GitHub(https://github.com/SeffyVon/DarkDestiny)!
+Check out full one-minute game playing video on YouTube (http://youtu.be/1po4sz6yDoU) or Youku in China (http://v.youku.com/v_show/id_XODMzNDU2NDA0.html) check out this project on GitHub(https://github.com/SeffyVon/DarkDestiny)!
 
 [![ScreenShot] (https://cloud.githubusercontent.com/assets/3908463/5158073/b11b8072-7328-11e4-9233-5c2fd8efcee3.gif)](http://youtu.be/1po4sz6yDoU.)
 [![ScreenShot] (https://cloud.githubusercontent.com/assets/3908463/5158032/de1bacac-7326-11e4-8b84-60f7d24145f7.gif)](http://youtu.be/1po4sz6yDoU.)
