@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_LCAfYIjzEeOh4eEKwNHOIA">
+  <name xsi:nil="true"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_LCDisIjzEeOh4eEKwNHOIA" name="com">
+    <packagedElement xmi:type="uml:Package" xmi:id="_LCDisYjzEeOh4eEKwNHOIA" name="darkdensity">
+      <packagedElement xmi:type="uml:Package" xmi:id="_LCEJwIjzEeOh4eEKwNHOIA" name="core">
+        <packagedElement xmi:type="uml:Class" xmi:id="_LCEw0IjzEeOh4eEKwNHOIA" name="ScreenManager" clientDependency="_gFDbYIjzEeOh4eEKwNHOIA"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_LCGmAIjzEeOh4eEKwNHOIA" name="GameManager"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_LCHNEIjzEeOh4eEKwNHOIA" name="Config"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_LCIbMIjzEeOh4eEKwNHOIA" name="GameCore"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_LCJCQIjzEeOh4eEKwNHOIA" name="InputManager"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_LCJpUIjzEeOh4eEKwNHOIA" name="GridManager"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_LCKQYIjzEeOh4eEKwNHOIA" name="Player"/>
+        <packagedElement xmi:type="uml:Association" xmi:id="_P0NqIIjzEeOh4eEKwNHOIA" name="A_&lt;gameCore>_&lt;gameManager>" memberEnd="_P0NqIYjzEeOh4eEKwNHOIA _P0NqJIjzEeOh4eEKwNHOIA">
+          <ownedEnd xmi:id="_P0NqIYjzEeOh4eEKwNHOIA" name="gameCore" type="_LCIbMIjzEeOh4eEKwNHOIA" association="_P0NqIIjzEeOh4eEKwNHOIA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_P0NqIojzEeOh4eEKwNHOIA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_P0NqI4jzEeOh4eEKwNHOIA" value="1"/>
+          </ownedEnd>
+          <ownedEnd xmi:id="_P0NqJIjzEeOh4eEKwNHOIA" name="gameManager" type="_LCGmAIjzEeOh4eEKwNHOIA" association="_P0NqIIjzEeOh4eEKwNHOIA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_P0NqJYjzEeOh4eEKwNHOIA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_P0NqJojzEeOh4eEKwNHOIA" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_RFxYoIjzEeOh4eEKwNHOIA" name="A_&lt;gameManager>_&lt;screenManager>" memberEnd="_RFxYoYjzEeOh4eEKwNHOIA _RFxYpIjzEeOh4eEKwNHOIA">
+          <ownedEnd xmi:id="_RFxYoYjzEeOh4eEKwNHOIA" name="gameManager" type="_LCGmAIjzEeOh4eEKwNHOIA" association="_RFxYoIjzEeOh4eEKwNHOIA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RFxYoojzEeOh4eEKwNHOIA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RFxYo4jzEeOh4eEKwNHOIA" value="1"/>
+          </ownedEnd>
+          <ownedEnd xmi:id="_RFxYpIjzEeOh4eEKwNHOIA" name="screenManager" type="_LCEw0IjzEeOh4eEKwNHOIA" association="_RFxYoIjzEeOh4eEKwNHOIA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RFxYpYjzEeOh4eEKwNHOIA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RFxYpojzEeOh4eEKwNHOIA" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_SBidUIjzEeOh4eEKwNHOIA" name="A_&lt;inputManager>_&lt;gameManager>" memberEnd="_SBidUYjzEeOh4eEKwNHOIA _SBidVIjzEeOh4eEKwNHOIA">
+          <ownedEnd xmi:id="_SBidUYjzEeOh4eEKwNHOIA" name="inputManager" type="_LCJCQIjzEeOh4eEKwNHOIA" association="_SBidUIjzEeOh4eEKwNHOIA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SBidUojzEeOh4eEKwNHOIA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SBidU4jzEeOh4eEKwNHOIA" value="1"/>
+          </ownedEnd>
+          <ownedEnd xmi:id="_SBidVIjzEeOh4eEKwNHOIA" name="gameManager" type="_LCGmAIjzEeOh4eEKwNHOIA" association="_SBidUIjzEeOh4eEKwNHOIA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SBidVYjzEeOh4eEKwNHOIA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SBidVojzEeOh4eEKwNHOIA" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_Uk2HkIjzEeOh4eEKwNHOIA" name="A_&lt;gameManager>_&lt;player>" memberEnd="_Uk2HkYjzEeOh4eEKwNHOIA _Uk2HlIjzEeOh4eEKwNHOIA">
+          <ownedEnd xmi:id="_Uk2HkYjzEeOh4eEKwNHOIA" name="gameManager" type="_LCGmAIjzEeOh4eEKwNHOIA" association="_Uk2HkIjzEeOh4eEKwNHOIA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Uk2HkojzEeOh4eEKwNHOIA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Uk2Hk4jzEeOh4eEKwNHOIA" value="1"/>
+          </ownedEnd>
+          <ownedEnd xmi:id="_Uk2HlIjzEeOh4eEKwNHOIA" name="player" type="_LCKQYIjzEeOh4eEKwNHOIA" association="_Uk2HkIjzEeOh4eEKwNHOIA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Uk2HlYjzEeOh4eEKwNHOIA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Uk2HlojzEeOh4eEKwNHOIA" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_U8t1AIjzEeOh4eEKwNHOIA" name="A_&lt;config>_&lt;gameCore>" memberEnd="_U8t1AYjzEeOh4eEKwNHOIA _U8t1BIjzEeOh4eEKwNHOIA">
+          <ownedEnd xmi:id="_U8t1AYjzEeOh4eEKwNHOIA" name="config" type="_LCHNEIjzEeOh4eEKwNHOIA" association="_U8t1AIjzEeOh4eEKwNHOIA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U8t1AojzEeOh4eEKwNHOIA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_U8t1A4jzEeOh4eEKwNHOIA" value="1"/>
+          </ownedEnd>
+          <ownedEnd xmi:id="_U8t1BIjzEeOh4eEKwNHOIA" name="gameCore" type="_LCIbMIjzEeOh4eEKwNHOIA" association="_U8t1AIjzEeOh4eEKwNHOIA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U8t1BYjzEeOh4eEKwNHOIA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_U8t1BojzEeOh4eEKwNHOIA" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_XowkgIjzEeOh4eEKwNHOIA" name="A_&lt;gridManager>_&lt;gameManager>" memberEnd="_XowkgYjzEeOh4eEKwNHOIA _XowkhIjzEeOh4eEKwNHOIA">
+          <ownedEnd xmi:id="_XowkgYjzEeOh4eEKwNHOIA" name="gridManager" type="_LCJpUIjzEeOh4eEKwNHOIA" association="_XowkgIjzEeOh4eEKwNHOIA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XowkgojzEeOh4eEKwNHOIA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Xowkg4jzEeOh4eEKwNHOIA" value="1"/>
+          </ownedEnd>
+          <ownedEnd xmi:id="_XowkhIjzEeOh4eEKwNHOIA" name="gameManager" type="_LCGmAIjzEeOh4eEKwNHOIA" association="_XowkgIjzEeOh4eEKwNHOIA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XowkhYjzEeOh4eEKwNHOIA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XowkhojzEeOh4eEKwNHOIA" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Nn3R4Ij0EeOh4eEKwNHOIA" name="SoundManager"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_LCK3cIjzEeOh4eEKwNHOIA" name="gamecommond">
+        <packagedElement xmi:type="uml:Class" xmi:id="_LCLegIjzEeOh4eEKwNHOIA" name="Attack" clientDependency="_LENe0IjzEeOh4eEKwNHOIA">
+          <generalization xmi:id="_CXDE8Ij0EeOh4eEKwNHOIA" general="_AXDjIIj0EeOh4eEKwNHOIA"/>
+          <interfaceRealization xmi:id="_LENe0IjzEeOh4eEKwNHOIA" name="GameCommand" client="_LCLegIjzEeOh4eEKwNHOIA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_LCMFkIjzEeOh4eEKwNHOIA" name="Move" clientDependency="_LEOF4IjzEeOh4eEKwNHOIA">
+          <generalization xmi:id="_Cj84gIj0EeOh4eEKwNHOIA" general="_AXDjIIj0EeOh4eEKwNHOIA"/>
+          <interfaceRealization xmi:id="_LEOF4IjzEeOh4eEKwNHOIA" name="GameCommand" client="_LCMFkIjzEeOh4eEKwNHOIA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_LCMsoIjzEeOh4eEKwNHOIA" name="ResuceSurvivor" clientDependency="_LEOF4YjzEeOh4eEKwNHOIA">
+          <generalization xmi:id="_C0IpkIj0EeOh4eEKwNHOIA" general="_AXDjIIj0EeOh4eEKwNHOIA"/>
+          <interfaceRealization xmi:id="_LEOF4YjzEeOh4eEKwNHOIA" name="GameCommand" client="_LCMsoIjzEeOh4eEKwNHOIA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_1vvmMIjzEeOh4eEKwNHOIA" name="A_&lt;gameCommand>_&lt;gameManager>" memberEnd="_1vvmMYjzEeOh4eEKwNHOIA _1vvmNIjzEeOh4eEKwNHOIA">
+          <ownedEnd xmi:id="_1vvmMYjzEeOh4eEKwNHOIA" name="gameCommand" association="_1vvmMIjzEeOh4eEKwNHOIA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1vvmMojzEeOh4eEKwNHOIA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1vvmM4jzEeOh4eEKwNHOIA" value="1"/>
+          </ownedEnd>
+          <ownedEnd xmi:id="_1vvmNIjzEeOh4eEKwNHOIA" name="gameManager" type="_LCGmAIjzEeOh4eEKwNHOIA" association="_1vvmMIjzEeOh4eEKwNHOIA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1vvmNYjzEeOh4eEKwNHOIA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1vvmNojzEeOh4eEKwNHOIA" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_AXDjIIj0EeOh4eEKwNHOIA" name="GameCommand"/>
+        <packagedElement xmi:type="uml:Association" xmi:id="_EBaVAIj0EeOh4eEKwNHOIA" name="A_&lt;gameCommand>_&lt;gameManager>" memberEnd="_EBaVAYj0EeOh4eEKwNHOIA _EBaVBIj0EeOh4eEKwNHOIA">
+          <ownedEnd xmi:id="_EBaVAYj0EeOh4eEKwNHOIA" name="gameCommand" type="_AXDjIIj0EeOh4eEKwNHOIA" association="_EBaVAIj0EeOh4eEKwNHOIA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EBaVAoj0EeOh4eEKwNHOIA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EBaVA4j0EeOh4eEKwNHOIA" value="1"/>
+          </ownedEnd>
+          <ownedEnd xmi:id="_EBaVBIj0EeOh4eEKwNHOIA" name="gameManager" type="_LCGmAIjzEeOh4eEKwNHOIA" association="_EBaVAIj0EeOh4eEKwNHOIA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EBaVBYj0EeOh4eEKwNHOIA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EBaVBoj0EeOh4eEKwNHOIA" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_YkTKQIj0EeOh4eEKwNHOIA" name="A_&lt;gameCommand>_&lt;gridManager>" memberEnd="_YkTKQYj0EeOh4eEKwNHOIA _YkTKRIj0EeOh4eEKwNHOIA" navigableOwnedEnd="_YkTKRIj0EeOh4eEKwNHOIA">
+          <ownedEnd xmi:id="_YkTKQYj0EeOh4eEKwNHOIA" name="gameCommand" type="_AXDjIIj0EeOh4eEKwNHOIA" association="_YkTKQIj0EeOh4eEKwNHOIA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YkTKQoj0EeOh4eEKwNHOIA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YkTKQ4j0EeOh4eEKwNHOIA" value="1"/>
+          </ownedEnd>
+          <ownedEnd xmi:id="_YkTKRIj0EeOh4eEKwNHOIA" name="gridManager" type="_LCJpUIjzEeOh4eEKwNHOIA" association="_YkTKQIj0EeOh4eEKwNHOIA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YkTKRYj0EeOh4eEKwNHOIA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YkTKRoj0EeOh4eEKwNHOIA" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_Zmm70Ij0EeOh4eEKwNHOIA" name="A_&lt;gameCommand>_&lt;screenManager>" memberEnd="_Zmm70Yj0EeOh4eEKwNHOIA _Zmm71Ij0EeOh4eEKwNHOIA" navigableOwnedEnd="_Zmm71Ij0EeOh4eEKwNHOIA">
+          <ownedEnd xmi:id="_Zmm70Yj0EeOh4eEKwNHOIA" name="gameCommand" type="_AXDjIIj0EeOh4eEKwNHOIA" association="_Zmm70Ij0EeOh4eEKwNHOIA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Zmm70oj0EeOh4eEKwNHOIA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Zmm704j0EeOh4eEKwNHOIA" value="1"/>
+          </ownedEnd>
+          <ownedEnd xmi:id="_Zmm71Ij0EeOh4eEKwNHOIA" name="screenManager" type="_LCEw0IjzEeOh4eEKwNHOIA" association="_Zmm70Ij0EeOh4eEKwNHOIA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Zmm71Yj0EeOh4eEKwNHOIA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Zmm71oj0EeOh4eEKwNHOIA" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_aTYiQIj0EeOh4eEKwNHOIA" name="A_&lt;gameCommand>_&lt;class1>" memberEnd="_aTYiQYj0EeOh4eEKwNHOIA _aTYiRIj0EeOh4eEKwNHOIA" navigableOwnedEnd="_aTYiRIj0EeOh4eEKwNHOIA">
+          <ownedEnd xmi:id="_aTYiQYj0EeOh4eEKwNHOIA" name="gameCommand" type="_AXDjIIj0EeOh4eEKwNHOIA" association="_aTYiQIj0EeOh4eEKwNHOIA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aTYiQoj0EeOh4eEKwNHOIA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aTYiQ4j0EeOh4eEKwNHOIA" value="1"/>
+          </ownedEnd>
+          <ownedEnd xmi:id="_aTYiRIj0EeOh4eEKwNHOIA" name="class1" type="_Nn3R4Ij0EeOh4eEKwNHOIA" association="_aTYiQIj0EeOh4eEKwNHOIA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aTYiRYj0EeOh4eEKwNHOIA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aTYiRoj0EeOh4eEKwNHOIA" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_LCNTsIjzEeOh4eEKwNHOIA" name="maprender">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_LCN6wIjzEeOh4eEKwNHOIA" name="Map"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_LCOh0IjzEeOh4eEKwNHOIA" name="Map01" clientDependency="_LEOF4ojzEeOh4eEKwNHOIA">
+          <interfaceRealization xmi:id="_LEOF4ojzEeOh4eEKwNHOIA" name="Map" supplier="_LCN6wIjzEeOh4eEKwNHOIA" client="_LCOh0IjzEeOh4eEKwNHOIA" contract="_LCN6wIjzEeOh4eEKwNHOIA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_LCPI4IjzEeOh4eEKwNHOIA" name="MapRender"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_LCPv8IjzEeOh4eEKwNHOIA" name="Map02" clientDependency="_LEOs8IjzEeOh4eEKwNHOIA">
+          <interfaceRealization xmi:id="_LEOs8IjzEeOh4eEKwNHOIA" name="Map" supplier="_LCN6wIjzEeOh4eEKwNHOIA" client="_LCPv8IjzEeOh4eEKwNHOIA" contract="_LCN6wIjzEeOh4eEKwNHOIA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_jckw0IjzEeOh4eEKwNHOIA" name="A_&lt;map>_&lt;mapRender>" memberEnd="_jckw0YjzEeOh4eEKwNHOIA _jckw1IjzEeOh4eEKwNHOIA">
+          <ownedEnd xmi:id="_jckw0YjzEeOh4eEKwNHOIA" name="map" type="_LCN6wIjzEeOh4eEKwNHOIA" association="_jckw0IjzEeOh4eEKwNHOIA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jckw0ojzEeOh4eEKwNHOIA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jckw04jzEeOh4eEKwNHOIA" value="1"/>
+          </ownedEnd>
+          <ownedEnd xmi:id="_jckw1IjzEeOh4eEKwNHOIA" name="mapRender" type="_LCPI4IjzEeOh4eEKwNHOIA" association="_jckw0IjzEeOh4eEKwNHOIA">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jckw1YjzEeOh4eEKwNHOIA" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jckw1ojzEeOh4eEKwNHOIA" value="1"/>
+          </ownedEnd>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_LCQXAIjzEeOh4eEKwNHOIA" name="units">
+        <packagedElement xmi:type="uml:Class" xmi:id="_LCQ-EIjzEeOh4eEKwNHOIA" name="Unit" isAbstract="true"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_LCSzQIjzEeOh4eEKwNHOIA" name="UnitFactory"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_LCTaUIjzEeOh4eEKwNHOIA" name="SurvivorFactory" clientDependency="_LEOs8YjzEeOh4eEKwNHOIA _n8kxQIjzEeOh4eEKwNHOIA">
+          <interfaceRealization xmi:id="_LEOs8YjzEeOh4eEKwNHOIA" name="UnitFactory" supplier="_LCSzQIjzEeOh4eEKwNHOIA" client="_LCTaUIjzEeOh4eEKwNHOIA" contract="_LCSzQIjzEeOh4eEKwNHOIA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_LCUocIjzEeOh4eEKwNHOIA" name="ZombieFactory" clientDependency="_LEOs8ojzEeOh4eEKwNHOIA _oiHHQIjzEeOh4eEKwNHOIA">
+          <interfaceRealization xmi:id="_LEOs8ojzEeOh4eEKwNHOIA" name="UnitFactory" supplier="_LCSzQIjzEeOh4eEKwNHOIA" client="_LCUocIjzEeOh4eEKwNHOIA" contract="_LCSzQIjzEeOh4eEKwNHOIA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_LCVPgIjzEeOh4eEKwNHOIA" name="Zombie">
+          <generalization xmi:id="_LEOs84jzEeOh4eEKwNHOIA" general="_LCQ-EIjzEeOh4eEKwNHOIA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_LCV2kIjzEeOh4eEKwNHOIA" name="Survivor">
+          <generalization xmi:id="_LEPUAIjzEeOh4eEKwNHOIA" general="_LCQ-EIjzEeOh4eEKwNHOIA"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_gFDbYIjzEeOh4eEKwNHOIA" name="Dependency1" supplier="_LCPI4IjzEeOh4eEKwNHOIA" client="_LCEw0IjzEeOh4eEKwNHOIA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_n8kxQIjzEeOh4eEKwNHOIA" name="Dependency2" supplier="_LCV2kIjzEeOh4eEKwNHOIA" client="_LCTaUIjzEeOh4eEKwNHOIA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_oiHHQIjzEeOh4eEKwNHOIA" name="Dependency3" supplier="_LCVPgIjzEeOh4eEKwNHOIA" client="_LCUocIjzEeOh4eEKwNHOIA"/>
+</uml:Model>
