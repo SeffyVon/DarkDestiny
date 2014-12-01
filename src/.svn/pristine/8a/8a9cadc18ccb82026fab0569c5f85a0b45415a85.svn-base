@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_meay4LPBEeOdEasZtwWdyA">
+  <name xsi:nil="true"/>
+  <elementImport xmi:id="_mfdUsLPBEeOdEasZtwWdyA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_meay4bPBEeOdEasZtwWdyA" name="com">
+    <packagedElement xmi:type="uml:Package" xmi:id="_meay4rPBEeOdEasZtwWdyA" name="darkdensity">
+      <packagedElement xmi:type="uml:Package" xmi:id="_meay47PBEeOdEasZtwWdyA" name="main">
+        <packagedElement xmi:type="uml:Class" xmi:id="_meqDcLPBEeOdEasZtwWdyA" name="Main">
+          <ownedOperation xmi:id="_mfd7wLPBEeOdEasZtwWdyA" name="main" visibility="public" isStatic="true">
+            <ownedParameter xmi:id="_mfd7wbPBEeOdEasZtwWdyA" name="arg">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mfd7wrPBEeOdEasZtwWdyA" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mfd7w7PBEeOdEasZtwWdyA"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_mfDsELPBEeOdEasZtwWdyA" name="core">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_mfDsEbPBEeOdEasZtwWdyA" name="GameCore"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

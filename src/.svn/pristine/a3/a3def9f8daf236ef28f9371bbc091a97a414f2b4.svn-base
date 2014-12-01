@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_euV-QLPAEeOdEasZtwWdyA">
+  <name xsi:nil="true"/>
+  <elementImport xmi:id="_eztmcLPAEeOdEasZtwWdyA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_ez_TQLPAEeOdEasZtwWdyA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+  </elementImport>
+  <elementImport xmi:id="_e01AwLPAEeOdEasZtwWdyA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+  </elementImport>
+  <elementImport xmi:id="_e14wsLPAEeOdEasZtwWdyA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+  </elementImport>
+  <elementImport xmi:id="_e17M8LPAEeOdEasZtwWdyA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_eu0fYLPAEeOdEasZtwWdyA" name="com">
+    <packagedElement xmi:type="uml:Package" xmi:id="_eu8bMLPAEeOdEasZtwWdyA" name="darkdensity">
+      <packagedElement xmi:type="uml:Package" xmi:id="_eu8bMbPAEeOdEasZtwWdyA" name="net">
+        <packagedElement xmi:type="uml:Package" xmi:id="_eu8bMrPAEeOdEasZtwWdyA" name="chat">
+          <packagedElement xmi:type="uml:Class" xmi:id="_eu9pULPAEeOdEasZtwWdyA" name="VoiceMessageReceiver">
+            <ownedAttribute xmi:id="_ezp8ELPAEeOdEasZtwWdyA" name="dataInputStream" visibility="package" type="_exPhQLPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_ezu0kLPAEeOdEasZtwWdyA" name="isReceiveVoiceMessage" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ezx34LPAEeOdEasZtwWdyA" name="isServer" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_ez2wYLPAEeOdEasZtwWdyA" name="cm" visibility="private" type="_evE-ELPAEeOdEasZtwWdyA" association="_e7AhQLPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_ez5MoLPAEeOdEasZtwWdyA" name="socket" visibility="private" type="_exPhRLPAEeOdEasZtwWdyA"/>
+            <ownedOperation xmi:id="_ez7o4LPAEeOdEasZtwWdyA" name="run" visibility="public"/>
+            <ownedOperation xmi:id="_ez83ALPAEeOdEasZtwWdyA" name="stopReceiveMessage" visibility="public"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_evAFkLPAEeOdEasZtwWdyA" name="ChatPanel">
+            <generalization xmi:id="_ez-sMLPAEeOdEasZtwWdyA" general="_exQvZrPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e0BIcLPAEeOdEasZtwWdyA" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+              <ownedComment xmi:id="_e0V4kLPAEeOdEasZtwWdyA">
+                <body>/** 
+ */
+</body>
+              </ownedComment>
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+              <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_e0BIcbPAEeOdEasZtwWdyA"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_e0YU0LPAEeOdEasZtwWdyA" name="nls" visibility="private" type="_exR9gLPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e0dNULPAEeOdEasZtwWdyA" name="fillColor" visibility="private" type="_exQIUbPAEeOdEasZtwWdyA" isReadOnly="true"/>
+            <ownedAttribute xmi:id="_e0is4LPAEeOdEasZtwWdyA" name="buffer" visibility="package" type="_exQvYLPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e0nlYLPAEeOdEasZtwWdyA" name="cm" visibility="private" type="_evIBYLPAEeOdEasZtwWdyA" association="_e7AhQrPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e0sd4LPAEeOdEasZtwWdyA" name="tf" visibility="private" type="_exQvaLPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e0x9cLPAEeOdEasZtwWdyA" name="tv" visibility="private" type="_exQvZ7PAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e03dALPAEeOdEasZtwWdyA" name="x" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_e03dAbPAEeOdEasZtwWdyA"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_e088kLPAEeOdEasZtwWdyA" name="y" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_e088kbPAEeOdEasZtwWdyA"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_e1B1ELPAEeOdEasZtwWdyA" name="width" visibility="private" isReadOnly="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_e1B1EbPAEeOdEasZtwWdyA" value="400"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_e1HUoLPAEeOdEasZtwWdyA" name="height" visibility="private" isReadOnly="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_e1HUobPAEeOdEasZtwWdyA" value="230"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_e1K_ALPAEeOdEasZtwWdyA" name="receiveMessageRunnable" visibility="private" type="_e1JJ0LPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e1OpYLPAEeOdEasZtwWdyA" name="receiveMessageThread" visibility="private" type="_e1M0MLPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e1S60LPAEeOdEasZtwWdyA" name="isReceiveMessage" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedAttribute>
+            <ownedOperation xmi:id="_e1UwALPAEeOdEasZtwWdyA" name="receiveMessage" visibility="public"/>
+            <ownedOperation xmi:id="_e1XzULPAEeOdEasZtwWdyA" name="startReceiveMessage" visibility="public"/>
+            <ownedOperation xmi:id="_e1aPkLPAEeOdEasZtwWdyA" name="stopReceiveMessage" visibility="public"/>
+            <ownedOperation xmi:id="_e1dS4LPAEeOdEasZtwWdyA" name="focusTf" visibility="public"/>
+            <ownedOperation xmi:id="_e1gWMLPAEeOdEasZtwWdyA" name="keyPressed" visibility="public">
+              <ownedParameter xmi:id="_e1gWMbPAEeOdEasZtwWdyA" name="e" type="_exQIVbPAEeOdEasZtwWdyA"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_e1kAkLPAEeOdEasZtwWdyA" name="keyReleased" visibility="public">
+              <ownedParameter xmi:id="_e1kAkbPAEeOdEasZtwWdyA" name="e" type="_exQIVbPAEeOdEasZtwWdyA"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_e1nD4LPAEeOdEasZtwWdyA" name="keyTyped" visibility="public">
+              <ownedParameter xmi:id="_e1nD4bPAEeOdEasZtwWdyA" name="e" type="_exQIVbPAEeOdEasZtwWdyA"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_e1quQLPAEeOdEasZtwWdyA" name="setCommandPool" visibility="public">
+              <ownedParameter xmi:id="_e1quQbPAEeOdEasZtwWdyA" name="gameWorld" type="_exRWdrPAEeOdEasZtwWdyA"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_evB6wLPAEeOdEasZtwWdyA" name="VoiceChatClient">
+            <generalization xmi:id="_e1vmwLPAEeOdEasZtwWdyA" general="_evE-ELPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e1w04LPAEeOdEasZtwWdyA" name="socket" visibility="private" type="_exPhRLPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e1zRILPAEeOdEasZtwWdyA" name="receiver" visibility="private" type="_eu9pULPAEeOdEasZtwWdyA" association="_e7BIULPAEeOdEasZtwWdyA"/>
+            <ownedOperation xmi:id="_e11GULPAEeOdEasZtwWdyA" name="sendVoiceMessage" visibility="public"/>
+            <ownedOperation xmi:id="_e127gLPAEeOdEasZtwWdyA" name="stopReceiveMessage" visibility="public"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_evDv8LPAEeOdEasZtwWdyA" name="VoicePacket">
+            <ownedAttribute xmi:id="_e15-0LPAEeOdEasZtwWdyA" name="message" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_e15-0bPAEeOdEasZtwWdyA" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_e15-0rPAEeOdEasZtwWdyA"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_e19CILPAEeOdEasZtwWdyA" name="sender" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedOperation xmi:id="_e2AsgLPAEeOdEasZtwWdyA" name="pack" visibility="public" isStatic="true">
+              <ownedParameter xmi:id="_e2AsgbPAEeOdEasZtwWdyA" name="message">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_e2AsgrPAEeOdEasZtwWdyA" value="*"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_e2Asg7PAEeOdEasZtwWdyA"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_e2AshLPAEeOdEasZtwWdyA" name="return" type="_evDv8LPAEeOdEasZtwWdyA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_e2B6oLPAEeOdEasZtwWdyA" name="getMessage" visibility="public">
+              <ownedParameter xmi:id="_e2B6obPAEeOdEasZtwWdyA" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_e2DIwLPAEeOdEasZtwWdyA" name="getSender" visibility="public">
+              <ownedParameter xmi:id="_e2DIwbPAEeOdEasZtwWdyA" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_evE-ELPAEeOdEasZtwWdyA" name="VoiceChatManager" isAbstract="true">
+            <ownedAttribute xmi:id="_e2GzILPAEeOdEasZtwWdyA" name="audioFormat" visibility="private" type="_exTLo7PAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e2LEkLPAEeOdEasZtwWdyA" name="isCapture" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_e2P9ELPAEeOdEasZtwWdyA" name="out" visibility="private" type="_exSkkrPAEeOdEasZtwWdyA"/>
+            <ownedOperation xmi:id="_e2SZULPAEeOdEasZtwWdyA" name="getFormat" visibility="private">
+              <ownedParameter xmi:id="_e2SZUbPAEeOdEasZtwWdyA" name="return" type="_exTLo7PAEeOdEasZtwWdyA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_e2UOgLPAEeOdEasZtwWdyA" name="captureAudio" visibility="public"/>
+            <ownedOperation xmi:id="_e2WDsLPAEeOdEasZtwWdyA" name="stopCapture" visibility="public"/>
+            <ownedOperation xmi:id="_e2X44LPAEeOdEasZtwWdyA" name="playAudio" visibility="public">
+              <ownedParameter xmi:id="_e2X44bPAEeOdEasZtwWdyA" name="audio">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_e2X44rPAEeOdEasZtwWdyA" value="*"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_e2X447PAEeOdEasZtwWdyA"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_e2ZHALPAEeOdEasZtwWdyA" name="getCapturedAudio" visibility="public">
+              <ownedParameter xmi:id="_e2ZHAbPAEeOdEasZtwWdyA" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_e2a8MLPAEeOdEasZtwWdyA" name="sendVoiceMessage" visibility="public" isAbstract="true"/>
+            <ownedOperation xmi:id="_e2cxYLPAEeOdEasZtwWdyA" name="stopReceiveMessage" visibility="public" isAbstract="true"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_evGzQLPAEeOdEasZtwWdyA" name="VoiceChatServer">
+            <generalization xmi:id="_e2emkLPAEeOdEasZtwWdyA" general="_evE-ELPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e2gbwLPAEeOdEasZtwWdyA" name="serverSocket" visibility="private" type="_exUZwLPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e2kGILPAEeOdEasZtwWdyA" name="clients" visibility="private" type="_e2i4ALPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e2miYLPAEeOdEasZtwWdyA" name="receivers" visibility="private" type="_e2lUQLPAEeOdEasZtwWdyA"/>
+            <ownedOperation xmi:id="_e2oXkLPAEeOdEasZtwWdyA" name="sendVoiceMessage" visibility="public"/>
+            <ownedOperation xmi:id="_e2qz0LPAEeOdEasZtwWdyA" name="sendVoiceMessage" visibility="public">
+              <ownedParameter xmi:id="_e2qz0bPAEeOdEasZtwWdyA" name="message">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_e2qz0rPAEeOdEasZtwWdyA" value="*"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_e2ra4LPAEeOdEasZtwWdyA"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_e2tQELPAEeOdEasZtwWdyA" name="stopReceiveMessage" visibility="public"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_evIBYLPAEeOdEasZtwWdyA" name="ChatManager">
+            <ownedAttribute xmi:id="_e2wTYLPAEeOdEasZtwWdyA" name="mcastSocket" visibility="private" type="_exVA0rPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e2yvoLPAEeOdEasZtwWdyA" name="ttl" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_e21y8LPAEeOdEasZtwWdyA" name="cheat" visibility="private" type="_exRWd7PAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e23oILPAEeOdEasZtwWdyA" name="commandPool" visibility="private" type="_exRWdbPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e27SgLPAEeOdEasZtwWdyA" name="commandFactory" visibility="private" type="_exVn4bPAEeOdEasZtwWdyA"/>
+            <ownedOperation xmi:id="_e29HsLPAEeOdEasZtwWdyA" name="receiveMessage" visibility="public">
+              <ownedParameter xmi:id="_e29HsbPAEeOdEasZtwWdyA" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_e2-84LPAEeOdEasZtwWdyA" name="sendMessage" visibility="public">
+              <ownedParameter xmi:id="_e2-84bPAEeOdEasZtwWdyA" name="message">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_e3AyELPAEeOdEasZtwWdyA" name="closeSocket" visibility="public"/>
+            <ownedOperation xmi:id="_e3DOULPAEeOdEasZtwWdyA" name="setCommandPool" visibility="public">
+              <ownedParameter xmi:id="_e3DOUbPAEeOdEasZtwWdyA" name="gameworld" type="_exRWdrPAEeOdEasZtwWdyA"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_e7AhQLPAEeOdEasZtwWdyA" memberEnd="_ez2wYLPAEeOdEasZtwWdyA _e7AhQbPAEeOdEasZtwWdyA">
+            <ownedEnd xmi:id="_e7AhQbPAEeOdEasZtwWdyA" name="VoiceMessageReceiver" type="_eu9pULPAEeOdEasZtwWdyA" association="_e7AhQLPAEeOdEasZtwWdyA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_e7AhQrPAEeOdEasZtwWdyA" memberEnd="_e0nlYLPAEeOdEasZtwWdyA _e7AhQ7PAEeOdEasZtwWdyA">
+            <ownedEnd xmi:id="_e7AhQ7PAEeOdEasZtwWdyA" name="ChatPanel" type="_evAFkLPAEeOdEasZtwWdyA" association="_e7AhQrPAEeOdEasZtwWdyA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_e7BIULPAEeOdEasZtwWdyA" memberEnd="_e1zRILPAEeOdEasZtwWdyA _e7BIUbPAEeOdEasZtwWdyA">
+            <ownedEnd xmi:id="_e7BIUbPAEeOdEasZtwWdyA" name="VoiceChatClient" type="_evB6wLPAEeOdEasZtwWdyA" association="_e7BIULPAEeOdEasZtwWdyA"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_evJPgLPAEeOdEasZtwWdyA" name="core">
+          <packagedElement xmi:type="uml:Class" xmi:id="_evJ2kLPAEeOdEasZtwWdyA" name="Packet">
+            <ownedAttribute xmi:id="_e3GRoLPAEeOdEasZtwWdyA" name="serialVersionUID" visibility="private" isStatic="true" isReadOnly="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+              <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_e3GRobPAEeOdEasZtwWdyA"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_e3It4LPAEeOdEasZtwWdyA" name="commandData" visibility="private" type="_e3HfwLPAEeOdEasZtwWdyA"/>
+            <ownedOperation xmi:id="_e3J8ALPAEeOdEasZtwWdyA" name="getClassName" visibility="public">
+              <ownedParameter xmi:id="_e3J8AbPAEeOdEasZtwWdyA" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_e3LKILPAEeOdEasZtwWdyA" name="getSenderName" visibility="public">
+              <ownedParameter xmi:id="_e3LKIbPAEeOdEasZtwWdyA" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_e3MYQLPAEeOdEasZtwWdyA" name="getCommandData" visibility="public">
+              <ownedParameter xmi:id="_e3MYQbPAEeOdEasZtwWdyA" name="return" type="_exVn4rPAEeOdEasZtwWdyA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_evLEsLPAEeOdEasZtwWdyA" name="GameServer">
+            <ownedAttribute xmi:id="_e3QCoLPAEeOdEasZtwWdyA" name="networkManager" visibility="private" type="_exW2ArPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e3UUELPAEeOdEasZtwWdyA" name="serverSocket" visibility="private" type="_exUZwLPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e3YlgLPAEeOdEasZtwWdyA" name="clients" visibility="private" type="_e2i4ALPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e3bo0LPAEeOdEasZtwWdyA" name="messageLength" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_e3f6QLPAEeOdEasZtwWdyA" name="messageAry" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_e3f6QbPAEeOdEasZtwWdyA" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_e3f6QrPAEeOdEasZtwWdyA"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_e3kLsLPAEeOdEasZtwWdyA" name="message" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_e3pEMLPAEeOdEasZtwWdyA" name="status" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedAttribute>
+            <ownedOperation xmi:id="_e3rgcLPAEeOdEasZtwWdyA" name="run" visibility="public"/>
+            <ownedOperation xmi:id="_e3t8sLPAEeOdEasZtwWdyA" name="notifyPlayerChange" visibility="public"/>
+            <ownedOperation xmi:id="_e3xAALPAEeOdEasZtwWdyA" name="getNetworkManager" visibility="public">
+              <ownedParameter xmi:id="_e3xAAbPAEeOdEasZtwWdyA" name="return" type="_exW2ArPAEeOdEasZtwWdyA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_e3zcQLPAEeOdEasZtwWdyA" name="startGame" visibility="public">
+              <ownedParameter xmi:id="_e3zcQbPAEeOdEasZtwWdyA" name="parent" type="_exW2ALPAEeOdEasZtwWdyA"/>
+              <ownedParameter xmi:id="_e3zcQrPAEeOdEasZtwWdyA" name="gameTime">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_e314gbPAEeOdEasZtwWdyA" name="sendNetworkCommand" visibility="public">
+              <ownedParameter xmi:id="_e314grPAEeOdEasZtwWdyA" name="packet" type="_e314gLPAEeOdEasZtwWdyA"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_evM54LPAEeOdEasZtwWdyA" name="GameClientIO">
+            <ownedAttribute xmi:id="_e35i4LPAEeOdEasZtwWdyA" name="socket" visibility="private" type="_exPhRLPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e39NQLPAEeOdEasZtwWdyA" name="networkManager" visibility="private" type="_exW2ArPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e4AQkLPAEeOdEasZtwWdyA" name="messageLength" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_e4FwILPAEeOdEasZtwWdyA" name="messageAry" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_e4FwIbPAEeOdEasZtwWdyA" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_e4FwIrPAEeOdEasZtwWdyA"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_e4KBkLPAEeOdEasZtwWdyA" name="dataInputStream" visibility="private" type="_exPhQLPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e4NE4LPAEeOdEasZtwWdyA" name="dataOutputStream" visibility="private" type="_exR9gbPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e4QIMLPAEeOdEasZtwWdyA" name="waitToStartGameThread" visibility="private" type="_e1M0MLPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e4VAsLPAEeOdEasZtwWdyA" name="gameWorld" visibility="private" type="_exRWdrPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e4YrELPAEeOdEasZtwWdyA" name="multiPlayerSettingPanel" visibility="private" type="_exYEIbPAEeOdEasZtwWdyA"/>
+            <ownedOperation xmi:id="_e4bHULPAEeOdEasZtwWdyA" name="handleConnection" visibility="public"/>
+            <ownedOperation xmi:id="_e4c8gLPAEeOdEasZtwWdyA" name="connectToGameLobby" visibility="public"/>
+            <ownedOperation xmi:id="_e4f_0LPAEeOdEasZtwWdyA" name="waitToStartGame" visibility="public"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_evOvELPAEeOdEasZtwWdyA" name="GameServerIS">
+            <ownedAttribute xmi:id="_e4jDILPAEeOdEasZtwWdyA" name="is" visibility="private" type="_exTLoLPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e4lfYLPAEeOdEasZtwWdyA" name="gameServer" visibility="private" type="_evLEsLPAEeOdEasZtwWdyA" association="_e7BIUrPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e4n7oLPAEeOdEasZtwWdyA" name="networkManager" visibility="private" type="_exW2ArPAEeOdEasZtwWdyA"/>
+            <ownedOperation xmi:id="_e4pJwLPAEeOdEasZtwWdyA" name="run" visibility="public"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_evP9MLPAEeOdEasZtwWdyA" name="GameServerCommandReceiver">
+            <ownedAttribute xmi:id="_e4rmALPAEeOdEasZtwWdyA" name="socket" visibility="private" type="_exPhRLPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e4tbMLPAEeOdEasZtwWdyA" name="networkManager" visibility="private" type="_exW2ArPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e4upULPAEeOdEasZtwWdyA" name="commandPool" visibility="private" type="_exRWdbPAEeOdEasZtwWdyA"/>
+            <ownedOperation xmi:id="_e4wegLPAEeOdEasZtwWdyA" name="run" visibility="public"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_evRLULPAEeOdEasZtwWdyA" name="NetUtil">
+            <ownedOperation xmi:id="_e4xFkLPAEeOdEasZtwWdyA" name="serialize" visibility="public" isStatic="true">
+              <ownedParameter xmi:id="_e4xFkbPAEeOdEasZtwWdyA" name="obj" type="_e314gLPAEeOdEasZtwWdyA"/>
+              <ownedParameter xmi:id="_e4xFkrPAEeOdEasZtwWdyA" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_e4yTsLPAEeOdEasZtwWdyA" name="deserialize" visibility="public" isStatic="true">
+              <ownedParameter xmi:id="_e4yTsbPAEeOdEasZtwWdyA" name="data">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_e4yTsrPAEeOdEasZtwWdyA" value="*"/>
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_e4yTs7PAEeOdEasZtwWdyA"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_e4yTtLPAEeOdEasZtwWdyA" name="return" type="_e314gLPAEeOdEasZtwWdyA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_evRyYLPAEeOdEasZtwWdyA" name="NetConstant">
+            <ownedAttribute xmi:id="_e40I4LPAEeOdEasZtwWdyA" name="GAME_WORLD_PORT" visibility="public" isStatic="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_e40I4bPAEeOdEasZtwWdyA" value="3000"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_e41XALPAEeOdEasZtwWdyA" name="VOICE_MESSAGE_PORT" visibility="public" isStatic="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_e41XAbPAEeOdEasZtwWdyA" value="3001"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_e41-ELPAEeOdEasZtwWdyA" name="LOBBY_PORT" visibility="public" isStatic="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_e42lILPAEeOdEasZtwWdyA" value="3002"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_e43MMLPAEeOdEasZtwWdyA" name="TIMEOUT" visibility="public" isStatic="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_e43MMbPAEeOdEasZtwWdyA" value="5000"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_e44aULPAEeOdEasZtwWdyA" name="STARTGAMECOMMAND" visibility="public" isStatic="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_e44aUbPAEeOdEasZtwWdyA" value="Start"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_e45BYLPAEeOdEasZtwWdyA" name="NETWORKCOMMANDPLAYERNAMEKEY" visibility="public" isStatic="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_e45BYbPAEeOdEasZtwWdyA" value="Playername"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_e46PgLPAEeOdEasZtwWdyA" name="NETWORKCOMMANDVALUE" visibility="public" isStatic="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_e46PgbPAEeOdEasZtwWdyA" value="CommandValue"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="_e462kLPAEeOdEasZtwWdyA" name="GAME_TIME_KEY" visibility="public" isStatic="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="_e462kbPAEeOdEasZtwWdyA" value="GAME_WINNGING_TIME"/>
+            </ownedAttribute>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_e7BIUrPAEeOdEasZtwWdyA" memberEnd="_e4lfYLPAEeOdEasZtwWdyA _e7BIU7PAEeOdEasZtwWdyA">
+            <ownedEnd xmi:id="_e7BIU7PAEeOdEasZtwWdyA" name="GameServerIS" type="_evOvELPAEeOdEasZtwWdyA" association="_e7BIUrPAEeOdEasZtwWdyA"/>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_evSZcLPAEeOdEasZtwWdyA" name="lobby">
+          <packagedElement xmi:type="uml:Class" xmi:id="_evTAgLPAEeOdEasZtwWdyA" name="SwapTeamRequest">
+            <generalization xmi:id="_e48EsLPAEeOdEasZtwWdyA" general="_evTnkLPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e48rwLPAEeOdEasZtwWdyA" name="role" visibility="private" type="_exZSQbPAEeOdEasZtwWdyA"/>
+            <ownedOperation xmi:id="_e4954LPAEeOdEasZtwWdyA" name="getTeam" visibility="public">
+              <ownedParameter xmi:id="_e4954bPAEeOdEasZtwWdyA" name="return" type="_exZSQbPAEeOdEasZtwWdyA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_evTnkLPAEeOdEasZtwWdyA" name="GameRequest">
+            <ownedAttribute xmi:id="_e4_vELPAEeOdEasZtwWdyA" name="playerName" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedAttribute>
+            <ownedOperation xmi:id="_e5A9MLPAEeOdEasZtwWdyA" name="getPlayerName" visibility="public">
+              <ownedParameter xmi:id="_e5A9MbPAEeOdEasZtwWdyA" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_evU1sLPAEeOdEasZtwWdyA" name="GameLobby" isAbstract="true">
+            <ownedAttribute xmi:id="_e5CyYLPAEeOdEasZtwWdyA" name="networkManager" visibility="protected" type="_exW2ArPAEeOdEasZtwWdyA"/>
+            <ownedOperation xmi:id="_e5EnkLPAEeOdEasZtwWdyA" name="sendRequest" visibility="public" isAbstract="true">
+              <ownedParameter xmi:id="_e5EnkbPAEeOdEasZtwWdyA" name="request" type="_evTnkLPAEeOdEasZtwWdyA"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_e5F1sLPAEeOdEasZtwWdyA" name="stop" visibility="public" isAbstract="true"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_evWD0LPAEeOdEasZtwWdyA" name="GameLobbyServer">
+            <generalization xmi:id="_e5GcwLPAEeOdEasZtwWdyA" general="_evU1sLPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e5IR8LPAEeOdEasZtwWdyA" name="serverSocket" visibility="private" type="_exUZwLPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e5KuMLPAEeOdEasZtwWdyA" name="clients" visibility="private" type="_e2i4ALPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e5Rb4LPAEeOdEasZtwWdyA" name="gameLoobyThread" visibility="private" type="_e1M0MLPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e5T4ILPAEeOdEasZtwWdyA" name="gameLobbyRunnable" visibility="private" type="_e1JJ0LPAEeOdEasZtwWdyA"/>
+            <ownedOperation xmi:id="_e5VtULPAEeOdEasZtwWdyA" name="sendRequest" visibility="public">
+              <ownedParameter xmi:id="_e5VtUbPAEeOdEasZtwWdyA" name="request" type="_evTnkLPAEeOdEasZtwWdyA"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_e5XigLPAEeOdEasZtwWdyA" name="stop" visibility="public"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_evX5ALPAEeOdEasZtwWdyA" name="GameLobbyClient">
+            <generalization xmi:id="_e5ZXsLPAEeOdEasZtwWdyA" general="_evU1sLPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e5al0LPAEeOdEasZtwWdyA" name="socket" visibility="private" type="_exPhRLPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e5cbALPAEeOdEasZtwWdyA" name="receiverThread" visibility="private" type="_e1M0MLPAEeOdEasZtwWdyA"/>
+            <ownedOperation xmi:id="_e5dpILPAEeOdEasZtwWdyA" name="sendRequest" visibility="public">
+              <ownedParameter xmi:id="_e5eQMLPAEeOdEasZtwWdyA" name="request" type="_evTnkLPAEeOdEasZtwWdyA"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_e5feULPAEeOdEasZtwWdyA" name="stop" visibility="public"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_evZHILPAEeOdEasZtwWdyA" name="GameLobbyRequestReceiver">
+            <ownedAttribute xmi:id="_e5jIsLPAEeOdEasZtwWdyA" name="networkManager" visibility="private" type="_exW2ArPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e5mMALPAEeOdEasZtwWdyA" name="socket" visibility="private" type="_exPhRLPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e5pPULPAEeOdEasZtwWdyA" name="multiPlayerSettingPanel" visibility="private" type="_exYEIbPAEeOdEasZtwWdyA"/>
+            <ownedOperation xmi:id="_e5sSoLPAEeOdEasZtwWdyA" name="run" visibility="public"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_eva8ULPAEeOdEasZtwWdyA" name="ChangeRevealRequest">
+            <generalization xmi:id="_e5uH0LPAEeOdEasZtwWdyA" general="_evTnkLPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e5uu4LPAEeOdEasZtwWdyA" name="isFullReveal" visibility="package">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedAttribute>
+            <ownedOperation xmi:id="_e5vV8LPAEeOdEasZtwWdyA" name="isFullReveal" visibility="public">
+              <ownedParameter xmi:id="_e5vV8bPAEeOdEasZtwWdyA" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_evcKcLPAEeOdEasZtwWdyA" name="ChangeCheatRequest">
+            <generalization xmi:id="_e5v9ALPAEeOdEasZtwWdyA" general="_evTnkLPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e5wkELPAEeOdEasZtwWdyA" name="isCheat" visibility="package">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedAttribute>
+            <ownedOperation xmi:id="_e5xyMLPAEeOdEasZtwWdyA" name="isCheat" visibility="public">
+              <ownedParameter xmi:id="_e5xyMbPAEeOdEasZtwWdyA" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_evd_oLPAEeOdEasZtwWdyA" name="ChangeGameTimeRequest">
+            <generalization xmi:id="_e5yZQLPAEeOdEasZtwWdyA" general="_evTnkLPAEeOdEasZtwWdyA"/>
+            <ownedAttribute xmi:id="_e5zAULPAEeOdEasZtwWdyA" name="gameTime" visibility="package">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedAttribute>
+            <ownedOperation xmi:id="_e50OcLPAEeOdEasZtwWdyA" name="getGameTime" visibility="public">
+              <ownedParameter xmi:id="_e50OcbPAEeOdEasZtwWdyA" name="return" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_exPhRbPAEeOdEasZtwWdyA" name="setting">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_exPhRrPAEeOdEasZtwWdyA" name="Config"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_exRWd7PAEeOdEasZtwWdyA" name="Cheat"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_exR9gLPAEeOdEasZtwWdyA" name="NLS"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_exWO8bPAEeOdEasZtwWdyA" name="Constant">
+          <packagedElement xmi:type="uml:DataType" xmi:id="_exWO8rPAEeOdEasZtwWdyA" name="BarricadeDirection"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_exXdELPAEeOdEasZtwWdyA" name="GameMode"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_exZSQbPAEeOdEasZtwWdyA" name="PlayerRole"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_exRWcrPAEeOdEasZtwWdyA" name="command">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_exRWc7PAEeOdEasZtwWdyA" name="Command"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_exW2AbPAEeOdEasZtwWdyA" name="SettingCommand"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_exRWdLPAEeOdEasZtwWdyA" name="core">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_exRWdbPAEeOdEasZtwWdyA" name="CommandPool"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_exRWdrPAEeOdEasZtwWdyA" name="GameWorld"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_exW2ArPAEeOdEasZtwWdyA" name="NetworkManager"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_exXdEbPAEeOdEasZtwWdyA" name="GameCore"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_exVn4LPAEeOdEasZtwWdyA" name="factory">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_exVn4bPAEeOdEasZtwWdyA" name="CommandFactory"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_exYEILPAEeOdEasZtwWdyA" name="gui">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_exYEIbPAEeOdEasZtwWdyA" name="MultiPlayerSettingPanel"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_exO6MLPAEeOdEasZtwWdyA" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_exO6MbPAEeOdEasZtwWdyA" name="io">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exPhQLPAEeOdEasZtwWdyA" name="DataInputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exPhQbPAEeOdEasZtwWdyA" name="IOException"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exPhQrPAEeOdEasZtwWdyA" name="ObjectInputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exR9gbPAEeOdEasZtwWdyA" name="DataOutputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exSkkLPAEeOdEasZtwWdyA" name="Serializable"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exSkkbPAEeOdEasZtwWdyA" name="ByteArrayInputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exSkkrPAEeOdEasZtwWdyA" name="ByteArrayOutputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exTLoLPAEeOdEasZtwWdyA" name="InputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exYrMLPAEeOdEasZtwWdyA" name="BufferedReader"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exYrMbPAEeOdEasZtwWdyA" name="InputStreamReader"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exZSQLPAEeOdEasZtwWdyA" name="ObjectOutputStream"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_exPhQ7PAEeOdEasZtwWdyA" name="net">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exPhRLPAEeOdEasZtwWdyA" name="Socket"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exR9grPAEeOdEasZtwWdyA" name="InetSocketAddress"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exUZwLPAEeOdEasZtwWdyA" name="ServerSocket"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exVA0LPAEeOdEasZtwWdyA" name="DatagramPacket"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exVA0bPAEeOdEasZtwWdyA" name="InetAddress"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exVA0rPAEeOdEasZtwWdyA" name="MulticastSocket"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exVA07PAEeOdEasZtwWdyA" name="UnknownHostException"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_exQIULPAEeOdEasZtwWdyA" name="awt">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exQIUbPAEeOdEasZtwWdyA" name="Color"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_exQIUrPAEeOdEasZtwWdyA" name="event">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_exQIU7PAEeOdEasZtwWdyA" name="ActionEvent"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_exQIVLPAEeOdEasZtwWdyA" name="ActionListener"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_exQIVbPAEeOdEasZtwWdyA" name="KeyEvent"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_exQIVrPAEeOdEasZtwWdyA" name="KeyListener"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_exQIV7PAEeOdEasZtwWdyA" name="image">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_exQvYLPAEeOdEasZtwWdyA" name="BufferedImage"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_exUZwbPAEeOdEasZtwWdyA" name="util">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exUZwrPAEeOdEasZtwWdyA" name="ArrayList"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exVA1LPAEeOdEasZtwWdyA" name="*"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exVn4rPAEeOdEasZtwWdyA" name="HashMap"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exWO8LPAEeOdEasZtwWdyA" name="UUID"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_exQvYbPAEeOdEasZtwWdyA" name="javax">
+    <packagedElement xmi:type="uml:Package" xmi:id="_exQvYrPAEeOdEasZtwWdyA" name="swing">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exQvY7PAEeOdEasZtwWdyA" name="BorderFactory"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exQvZLPAEeOdEasZtwWdyA" name="JButton"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exQvZbPAEeOdEasZtwWdyA" name="JLabel"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exQvZrPAEeOdEasZtwWdyA" name="JPanel"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exQvZ7PAEeOdEasZtwWdyA" name="JTextArea"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exQvaLPAEeOdEasZtwWdyA" name="JTextField"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exQvabPAEeOdEasZtwWdyA" name="SwingUtilities"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_exRWcLPAEeOdEasZtwWdyA" name="border">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_exRWcbPAEeOdEasZtwWdyA" name="Border"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_exW2ALPAEeOdEasZtwWdyA" name="JFrame"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_exTLobPAEeOdEasZtwWdyA" name="sound">
+      <packagedElement xmi:type="uml:Package" xmi:id="_exTLorPAEeOdEasZtwWdyA" name="sampled">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_exTLo7PAEeOdEasZtwWdyA" name="AudioFormat"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_exTLpLPAEeOdEasZtwWdyA" name="AudioInputStream"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_exTysLPAEeOdEasZtwWdyA" name="AudioSystem"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_exTysbPAEeOdEasZtwWdyA" name="DataLine"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_exTysrPAEeOdEasZtwWdyA" name="LineUnavailableException"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_exTys7PAEeOdEasZtwWdyA" name="SourceDataLine"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_exTytLPAEeOdEasZtwWdyA" name="TargetDataLine"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_e1JJ0LPAEeOdEasZtwWdyA" name="Runnable"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_e1M0MLPAEeOdEasZtwWdyA" name="Thread"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_e2i4ALPAEeOdEasZtwWdyA" name="ArrayList&lt;Socket>"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_e2lUQLPAEeOdEasZtwWdyA" name="ArrayList&lt;VoiceMessageReceiver>"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_e3HfwLPAEeOdEasZtwWdyA" name="HashMap&lt;String,Object>"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_e314gLPAEeOdEasZtwWdyA" name="Object"/>
+</uml:Model>

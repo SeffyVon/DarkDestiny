@@ -1,0 +1,286 @@
+### Eclipse Workspace Patch 1.0
+#P Issac
+Index: src/com/darkdensity/maprender/Map.java
+===================================================================
+--- src/com/darkdensity/maprender/Map.java	(revision 89)
++++ src/com/darkdensity/maprender/Map.java	(working copy)
+@@ -38,7 +38,7 @@
+ 	}
+ 
+ 	// draw the map to the screen
+-	public void redraw(Graphics2D g, int screenWidth, int screenHeight) {
++	public Image redraw(Graphics2D g, int screenWidth, int screenHeight) {
+ //		//System.out.print("Map: redraw()");
+ 		int offsetX = iRenderX % TILE_WIDTH;
+ 		int offsetY = iRenderY % TILE_HEIGHT;
+@@ -52,7 +52,7 @@
+ 		////System.out.print(iRenderX);
+ 		////System.out.print(iRenderY);
+ 		Image image = ImageLoader.loadImage(Config.MINI_MAP_PATH + mapFile + ".jpg");
+-		g.drawImage(image, 0 - iRenderX, 0 - iRenderY, null);
++		return image;
+ 		//g.drawImage(ResourceManager.Constant.IMAGE_MAP_BG, 0 - iRenderX, 0 - iRenderY, null);
+ 	}
+ 
+Index: src/com/darkdensity/core/GameCore.java
+===================================================================
+--- src/com/darkdensity/core/GameCore.java	(revision 89)
++++ src/com/darkdensity/core/GameCore.java	(working copy)
+@@ -5,6 +5,7 @@
+ 
+ import javax.swing.JComponent;
+ import javax.swing.JFrame;
++import javax.swing.JLayeredPane;
+ import javax.swing.JPanel;
+ 
+ import com.darkdensity.gui.MainMenuPanel;
+@@ -13,7 +14,7 @@
+ public class GameCore {
+ 
+ 	protected ScreenManager screen;
+-	public JPanel displayPanel;
++	public JLayeredPane displayPanel;
+ 	
+ 	public GameCore() {
+ 		screen = new ScreenManager();
+Index: src/com/darkdensity/gui/GamePanel.java
+===================================================================
+--- src/com/darkdensity/gui/GamePanel.java	(revision 89)
++++ src/com/darkdensity/gui/GamePanel.java	(working copy)
+@@ -4,15 +4,11 @@
+ import java.awt.Graphics;
+ import java.awt.Graphics2D;
+ import java.awt.Robot;
+-import java.awt.event.ActionEvent;
+-import java.awt.event.ActionListener;
+ import java.awt.event.KeyEvent;
+ import java.awt.image.BufferStrategy;
+-import java.util.EventListener;
+-import java.util.UUID;
+ 
+-import javax.swing.JButton;
+ import javax.swing.JFrame;
++import javax.swing.JLayeredPane;
+ import javax.swing.JPanel;
+ import javax.swing.JTextField;
+ 
+@@ -24,7 +20,6 @@
+ import com.darkdensity.maprender.GridMap;
+ import com.darkdensity.maprender.Map;
+ import com.darkdensity.setting.Config;
+-import com.darkdensity.tile.Survivor;
+ 
+ /*
+  * 
+@@ -50,7 +45,6 @@
+ 	// ConsolePanel controlPanel;
+ 	Robot robot;
+ 	Thread gameWorldThread;
+-	JPanel tpanel;
+ 
+ 	public GamePanel(JFrame frame, int gameMode) {
+ 		super(frame);
+@@ -89,26 +83,25 @@
+ 		mapPanel = new MapPanel(frame);
+ 		miniMapPanel = new MiniMapPanel(frame);
+ 
+-		add(mapPanel);
+-		add(miniMapPanel);
++		add(mapPanel, JLayeredPane.DEFAULT_LAYER);
++		add(miniMapPanel, JLayeredPane.PALETTE_LAYER);
+ 
+-		
+-//		tpanel = new JPanel();
+-//		tpanel.setLocation(150, 300);
+-//		tpanel.setSize(getWidth(),300);
+-//		tpanel.setBackground(Color.RED);
+-//		tpanel.setVisible(true);
+-		
+-//		JTextField tf = new JTextField(20);
+-		
+-//		tf.setLocation(0,0);
+-//		tpanel.add(tf);
+-		
+-//		add(tpanel);
+-		
+-		//this.frame.setComponentZOrder(mapPanel, 2);
+-		//this.frame.setComponentZOrder(miniMapPanel, 1);
+-//		setComponentZOrder(tpanel, 0);
++		JPanel tpanel = new JPanel();
++		tpanel.setLocation(0, 300);
++		tpanel.setSize(1280, 300);
++		tpanel.setBackground(Color.RED);
++		tpanel.setVisible(true);
++
++		JTextField tf = new JTextField(20);
++
++		tf.setLocation(0, 0);
++		tpanel.add(tf);
++
++		add(tpanel,MODAL_LAYER);
++
++		// this.frame.setComponentZOrder(mapPanel, 2);
++		// this.frame.setComponentZOrder(miniMapPanel, 1);
++		// setComponentZOrder(tpanel, 0);
+ 
+ 		map = mapPanel.getMap();
+ 
+@@ -116,19 +109,13 @@
+ 		gridMapRender = gridmap.getTileMapRender();
+ 		gridMapRender.screenWidth = getWidth();
+ 		gridMapRender.screenHeight = getHeight();
+-		
+-//		gridmap.buildSprite(new Survivor() , icon, new UUID(2, 3));
+-		
+-		
+-		
+-		
+ 
+-		
+-		
++		// gridmap.buildSprite(new Survivor() , icon, new UUID(2, 3));
++
+ 		// controlPanel = new ConsolePanel(gridMapRender);
+ 		// controlPanel.setLocation(getWidth() - controlPanel.getWidth(), 0);
+ 		// add(controlPanel);
+-		setComponentZOrder(miniMapPanel, 0);
++		//setComponentZOrder(miniMapPanel, 0);
+ 	}
+ 
+ 	public void gameLoop() {
+@@ -162,14 +149,16 @@
+ 
+ 	}
+ 
++	/*
+ 	@Override
+ 	public void paintComponent(Graphics g) {
+ 		super.paintComponent(g);
+ 		mapPanel.paintComponent(g);
+ 		miniMapPanel.paintComponent(g);
+ 		gridMapRender.draw((Graphics2D) g);
+-		
++
+ 	}
++	*/
+ 
+ 	@Override
+ 	public void update(long elapsedTime) {
+@@ -227,18 +216,20 @@
+ 		miniMapPanel.setRectangleXY(iRenderX, iRenderY);
+ 		gridMapRender.iRenderX = iRenderX;
+ 		gridMapRender.iRenderY = iRenderY;
+-		
++
+ 	}
+ 
+ 	private void redrawScreen(Graphics2D g) {
+ 		// draw the map first
+ 		// //System.out.print("redrawScreen");
+ 		// map.redraw(g, getWidth(), getHeight());
++		
+ 		mapPanel.paintComponent(g);
+ 		gridMapRender.redraw(g);
+ 		miniMapPanel.paintComponent(g);
+ 		// draw the dragging rectangle
+ 		controlManager.dragActionDrawer(g);
++		this.paint(g);
+ 		// draw the mini map
+ 		// miniMapPanel.redraw(g);
+ 		// strategy = getBufferStrategy();
+Index: src/com/darkdensity/gui/Abstractpanel.java
+===================================================================
+--- src/com/darkdensity/gui/Abstractpanel.java	(revision 89)
++++ src/com/darkdensity/gui/Abstractpanel.java	(working copy)
+@@ -10,13 +10,14 @@
+ import javax.swing.BorderFactory;
+ import javax.swing.JButton;
+ import javax.swing.JFrame;
++import javax.swing.JLayeredPane;
+ import javax.swing.JPanel;
+ 
+ import com.darkdensity.core.ResourceManager;
+ import com.darkdensity.setting.Config;
+ import com.darkdensity.setting.NLS;
+ 
+-public abstract class Abstractpanel extends JPanel {
++public abstract class Abstractpanel extends JLayeredPane {
+ 	protected NLS nls;
+ 	protected static final Color borderColor = new Color(255, 0, 0, 100);
+ 	protected static final Color fillColor = new Color(0, 0, 0, 70);
+@@ -49,9 +50,12 @@
+ 		button.addActionListener(listenner);
+ 	}
+ 
++	/*
+ 	public void paintComponent(Graphics g) {
+-		g.drawImage(background, 0, 0, getWidth(), getHeight(), null);
++		super.paintComponent(g);
++		//g.drawImage(background, 0, 0, getWidth(), getHeight(), this);
+ 	};
++	*/
+ 
+ 	public void update(long elapsedTime) {
+ 	};
+Index: src/com/darkdensity/gui/MapPanel.java
+===================================================================
+--- src/com/darkdensity/gui/MapPanel.java	(revision 89)
++++ src/com/darkdensity/gui/MapPanel.java	(working copy)
+@@ -2,39 +2,43 @@
+ 
+ import java.awt.Graphics;
+ import java.awt.Graphics2D;
+-import java.awt.image.BufferStrategy;
++import java.awt.Image;
+ 
+ import javax.swing.JFrame;
++import javax.swing.JPanel;
+ 
+ import com.darkdensity.maprender.Map;
+ 
+-public class MapPanel extends Abstractpanel {
++public class MapPanel extends JPanel {
+ 	private Map map;
++	private JFrame frame;
++
+ 	public MapPanel(JFrame frame) {
+-		super(frame);
++		this.frame = frame;
++		setLayout(null);
++		setSize(frame.getWidth(), frame.getHeight());
+ 		map = new Map("BigMap");
+ 	}
+-	
+-	public Map getMap(){
++
++	public Map getMap() {
+ 		return map;
+ 	}
+-	
++
+ 	@Override
+ 	public void paintComponent(Graphics g) {
+-		////System.out.print("MapPanel: paintComponent()");
+-		////System.out.print("MapPanel.getWidth: " + getWidth() + " getHeight: " + getHeight());
+-		map.redraw((Graphics2D) g, getWidth(), getHeight());
++		super.paintComponent(g);
++		// //System.out.print("MapPanel: paintComponent()");
++		// //System.out.print("MapPanel.getWidth: " + getWidth() +
++		// " getHeight: " + getHeight());
++		Image i  = map.redraw((Graphics2D) g, getWidth(), getHeight());
++		g.drawImage(i, 0 - map.iRenderX, 0 - map.iRenderY, this);
+ 	}
+ 
+-	@Override
+ 	public void update(long elapsedTime) {
+ 	}
+ 
+-	@Override
+ 	public void reset() {
+ 		// item.elastic.slide(0, 100);
+ 	}
+-	
+-	
+-	
++
+ }

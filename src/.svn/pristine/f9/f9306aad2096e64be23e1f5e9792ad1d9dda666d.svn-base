@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_5YjhoLPBEeOdEasZtwWdyA">
+  <name xsi:nil="true"/>
+  <elementImport xmi:id="_5ZadQLPBEeOdEasZtwWdyA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+  </elementImport>
+  <elementImport xmi:id="_5Z0s8LPBEeOdEasZtwWdyA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_5YjhobPBEeOdEasZtwWdyA" name="com">
+    <packagedElement xmi:type="uml:Package" xmi:id="_5YjhorPBEeOdEasZtwWdyA" name="darkdensity">
+      <packagedElement xmi:type="uml:Package" xmi:id="_5YkIsLPBEeOdEasZtwWdyA" name="player">
+        <packagedElement xmi:type="uml:Class" xmi:id="_5YkvwLPBEeOdEasZtwWdyA" name="Team">
+          <ownedComment xmi:id="_5YlW0LPBEeOdEasZtwWdyA">
+            <body>/** 
+ * @ClassName: Team
+ * @Description: A team have resource hand player
+ * @author Team A1
+ * @date 19 Mar 2014 16:14:11
+ */
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_5ZFGELPBEeOdEasZtwWdyA" name="playerRole" visibility="protected" type="_5ZDQ5LPBEeOdEasZtwWdyA"/>
+          <ownedAttribute xmi:id="_5ZbEULPBEeOdEasZtwWdyA" name="food" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5ZcScLPBEeOdEasZtwWdyA" name="wood" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5ZdgkLPBEeOdEasZtwWdyA" name="iron" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5ZeusLPBEeOdEasZtwWdyA" name="foodConsume" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5ZfVwLPBEeOdEasZtwWdyA" name="numOfSprite" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5Zf80LPBEeOdEasZtwWdyA" name="tileManager" visibility="protected" type="_5ZDQ4bPBEeOdEasZtwWdyA"/>
+          <ownedOperation xmi:id="_5Zgj4LPBEeOdEasZtwWdyA" name="getNumOfSprite" visibility="public">
+            <ownedParameter xmi:id="_5Zgj4bPBEeOdEasZtwWdyA" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5ZhK8LPBEeOdEasZtwWdyA" name="getFood" visibility="public">
+            <ownedParameter xmi:id="_5ZhK8bPBEeOdEasZtwWdyA" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5ZhyALPBEeOdEasZtwWdyA" name="setFood" visibility="public">
+            <ownedParameter xmi:id="_5ZiZELPBEeOdEasZtwWdyA" name="food">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5ZjAILPBEeOdEasZtwWdyA" name="addFood" visibility="public">
+            <ownedParameter xmi:id="_5ZjAIbPBEeOdEasZtwWdyA" name="food">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5ZjnMLPBEeOdEasZtwWdyA" name="minusFood" visibility="public">
+            <ownedParameter xmi:id="_5ZjnMbPBEeOdEasZtwWdyA" name="food">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5Zk1ULPBEeOdEasZtwWdyA" name="getWood" visibility="public">
+            <ownedParameter xmi:id="_5Zk1UbPBEeOdEasZtwWdyA" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5ZlcYLPBEeOdEasZtwWdyA" name="setWood" visibility="public">
+            <ownedParameter xmi:id="_5ZlcYbPBEeOdEasZtwWdyA" name="wood">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5ZmDcLPBEeOdEasZtwWdyA" name="addWood" visibility="public">
+            <ownedParameter xmi:id="_5ZmDcbPBEeOdEasZtwWdyA" name="wood">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5ZmqgLPBEeOdEasZtwWdyA" name="minusWood" visibility="public">
+            <ownedParameter xmi:id="_5ZmqgbPBEeOdEasZtwWdyA" name="wood">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5ZnRkLPBEeOdEasZtwWdyA" name="getIron" visibility="public">
+            <ownedParameter xmi:id="_5ZnRkbPBEeOdEasZtwWdyA" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5Zn4oLPBEeOdEasZtwWdyA" name="setIron" visibility="public">
+            <ownedParameter xmi:id="_5Zn4obPBEeOdEasZtwWdyA" name="iron">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5ZofsLPBEeOdEasZtwWdyA" name="addIron" visibility="public">
+            <ownedParameter xmi:id="_5ZofsbPBEeOdEasZtwWdyA" name="iron">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5ZpGwLPBEeOdEasZtwWdyA" name="minusIron" visibility="public">
+            <ownedParameter xmi:id="_5ZpGwbPBEeOdEasZtwWdyA" name="iron">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5Zpt0LPBEeOdEasZtwWdyA" name="getFoodConsume" visibility="public">
+            <ownedParameter xmi:id="_5Zpt0bPBEeOdEasZtwWdyA" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5Zpt0rPBEeOdEasZtwWdyA" name="setFoodConsume" visibility="public">
+            <ownedParameter xmi:id="_5Zpt07PBEeOdEasZtwWdyA" name="foodConsume">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5Zq78LPBEeOdEasZtwWdyA" name="setTileManager" visibility="public">
+            <ownedParameter xmi:id="_5Zq78bPBEeOdEasZtwWdyA" name="tileManager" type="_5ZDQ4bPBEeOdEasZtwWdyA"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5ZrjALPBEeOdEasZtwWdyA" name="getPlayerRole" visibility="public">
+            <ownedParameter xmi:id="_5ZrjAbPBEeOdEasZtwWdyA" name="return" type="_5ZDQ5LPBEeOdEasZtwWdyA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5ZsKELPBEeOdEasZtwWdyA" name="setPlayerRole" visibility="public">
+            <ownedParameter xmi:id="_5ZsKEbPBEeOdEasZtwWdyA" name="playerRole" type="_5ZDQ5LPBEeOdEasZtwWdyA"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_5Yl94LPBEeOdEasZtwWdyA" name="Resource">
+          <ownedComment xmi:id="_5Ymk8LPBEeOdEasZtwWdyA">
+            <body>/** 
+ * @ClassName: Resource
+ * @Description: resource���class handle with how much resources
+ * the team can use
+ * @author Team A1
+ * @date 19 Mar 2014 16:11:02
+ */
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_5ZtYMLPBEeOdEasZtwWdyA" name="food" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5Zt_QLPBEeOdEasZtwWdyA" name="iron" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5ZvNYLPBEeOdEasZtwWdyA" name="wood" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_5Zv0cLPBEeOdEasZtwWdyA" name="survivor" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_5ZwbgLPBEeOdEasZtwWdyA" name="getFood" visibility="public">
+            <ownedParameter xmi:id="_5ZwbgbPBEeOdEasZtwWdyA" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5ZwbgrPBEeOdEasZtwWdyA" name="setFood" visibility="public">
+            <ownedParameter xmi:id="_5Zwbg7PBEeOdEasZtwWdyA" name="food">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5ZxCkLPBEeOdEasZtwWdyA" name="getIron" visibility="public">
+            <ownedParameter xmi:id="_5ZxCkbPBEeOdEasZtwWdyA" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5ZxpoLPBEeOdEasZtwWdyA" name="setIron" visibility="public">
+            <ownedParameter xmi:id="_5ZxpobPBEeOdEasZtwWdyA" name="iron">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5ZyQsLPBEeOdEasZtwWdyA" name="getWood" visibility="public">
+            <ownedParameter xmi:id="_5ZyQsbPBEeOdEasZtwWdyA" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5ZyQsrPBEeOdEasZtwWdyA" name="setWood" visibility="public">
+            <ownedParameter xmi:id="_5ZyQs7PBEeOdEasZtwWdyA" name="wood">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5Zy3wLPBEeOdEasZtwWdyA" name="getSurvivor" visibility="public">
+            <ownedParameter xmi:id="_5Zy3wbPBEeOdEasZtwWdyA" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5Zze0LPBEeOdEasZtwWdyA" name="setSurvivor" visibility="public">
+            <ownedParameter xmi:id="_5Zze0bPBEeOdEasZtwWdyA" name="survivor">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_5Z0s8bPBEeOdEasZtwWdyA" name="toString" visibility="public">
+            <ownedParameter xmi:id="_5Z0s8rPBEeOdEasZtwWdyA" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_5ZDQ4LPBEeOdEasZtwWdyA" name="core">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_5ZDQ4bPBEeOdEasZtwWdyA" name="TileManager"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_5ZDQ4rPBEeOdEasZtwWdyA" name="setting">
+        <packagedElement xmi:type="uml:Package" xmi:id="_5ZDQ47PBEeOdEasZtwWdyA" name="Constant">
+          <packagedElement xmi:type="uml:DataType" xmi:id="_5ZDQ5LPBEeOdEasZtwWdyA" name="PlayerRole"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

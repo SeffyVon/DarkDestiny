@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_4yy-oLPAEeOdEasZtwWdyA">
+  <name xsi:nil="true"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_4yy-obPAEeOdEasZtwWdyA" name="com">
+    <packagedElement xmi:type="uml:Package" xmi:id="_4yzlsLPAEeOdEasZtwWdyA" name="darkdensity">
+      <packagedElement xmi:type="uml:Package" xmi:id="_4yzlsbPAEeOdEasZtwWdyA" name="command">
+        <packagedElement xmi:type="uml:Class" xmi:id="_4zIV0LPAEeOdEasZtwWdyA" name="MoveCommand" clientDependency="_436IILPAEeOdEasZtwWdyA">
+          <ownedComment xmi:id="_4zI84LPAEeOdEasZtwWdyA">
+            <body>/** 
+ * @ClassName: MoveCommand
+ * @Description: move the survivor to destination
+ * @author Team A1
+ * @date 19 Mar 2014 13:15:51
+ */
+</body>
+          </ownedComment>
+          <generalization xmi:id="_436IIbPAEeOdEasZtwWdyA" general="_43yMUrPAEeOdEasZtwWdyA"/>
+          <interfaceRealization xmi:id="_436IILPAEeOdEasZtwWdyA" name="Command" supplier="_42yGwbPAEeOdEasZtwWdyA" client="_4zIV0LPAEeOdEasZtwWdyA" contract="_42yGwbPAEeOdEasZtwWdyA"/>
+          <ownedOperation xmi:id="_436vMLPAEeOdEasZtwWdyA" name="execute" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_4zbQwLPAEeOdEasZtwWdyA" name="ScavengeCommand" clientDependency="_437WQLPAEeOdEasZtwWdyA">
+          <ownedComment xmi:id="_4zce4LPAEeOdEasZtwWdyA">
+            <body>/** 
+ * @ClassName: ScavengeCommand
+ * @Description: scavenge resources in the building, including food, wood and
+ * iron
+ * @author Team A1
+ * @date 19 Mar 2014 13:18:15
+ */
+</body>
+          </ownedComment>
+          <generalization xmi:id="_437WQbPAEeOdEasZtwWdyA" general="_43yMUrPAEeOdEasZtwWdyA"/>
+          <interfaceRealization xmi:id="_437WQLPAEeOdEasZtwWdyA" name="Command" supplier="_42yGwbPAEeOdEasZtwWdyA" client="_4zbQwLPAEeOdEasZtwWdyA" contract="_42yGwbPAEeOdEasZtwWdyA"/>
+          <ownedOperation xmi:id="_4379ULPAEeOdEasZtwWdyA" name="execute" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_4zqhULPAEeOdEasZtwWdyA" name="ShowAllRevalCommand" clientDependency="_438kYLPAEeOdEasZtwWdyA">
+          <generalization xmi:id="_438kYbPAEeOdEasZtwWdyA" general="_43yMUrPAEeOdEasZtwWdyA"/>
+          <interfaceRealization xmi:id="_438kYLPAEeOdEasZtwWdyA" name="Command" supplier="_42yGwbPAEeOdEasZtwWdyA" client="_4zqhULPAEeOdEasZtwWdyA" contract="_42yGwbPAEeOdEasZtwWdyA"/>
+          <ownedOperation xmi:id="_439LcLPAEeOdEasZtwWdyA" name="execute" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_4z81MLPAEeOdEasZtwWdyA" name="AddWoodCommand" clientDependency="_439ygLPAEeOdEasZtwWdyA">
+          <generalization xmi:id="_439ygbPAEeOdEasZtwWdyA" general="_43yMUrPAEeOdEasZtwWdyA"/>
+          <interfaceRealization xmi:id="_439ygLPAEeOdEasZtwWdyA" name="Command" supplier="_42yGwbPAEeOdEasZtwWdyA" client="_4z81MLPAEeOdEasZtwWdyA" contract="_42yGwbPAEeOdEasZtwWdyA"/>
+          <ownedOperation xmi:id="_439ygrPAEeOdEasZtwWdyA" name="execute" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_40RlULPAEeOdEasZtwWdyA" name="SettingCommand" clientDependency="_43-ZkLPAEeOdEasZtwWdyA">
+          <ownedComment xmi:id="_40SzcLPAEeOdEasZtwWdyA">
+            <body>/** 
+ * @ClassName: SettingCommand
+ * @Description: Change setting of the game 
+ * @author Team A1
+ * @date 19 Mar 2014 13:19:06
+ */
+</body>
+          </ownedComment>
+          <generalization xmi:id="_43-ZkbPAEeOdEasZtwWdyA" general="_43yMUrPAEeOdEasZtwWdyA"/>
+          <interfaceRealization xmi:id="_43-ZkLPAEeOdEasZtwWdyA" name="Command" supplier="_42yGwbPAEeOdEasZtwWdyA" client="_40RlULPAEeOdEasZtwWdyA" contract="_42yGwbPAEeOdEasZtwWdyA"/>
+          <ownedOperation xmi:id="_43-ZkrPAEeOdEasZtwWdyA" name="execute" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_40luYLPAEeOdEasZtwWdyA" name="AddIronCommand" clientDependency="_43_AoLPAEeOdEasZtwWdyA">
+          <generalization xmi:id="_43_nsLPAEeOdEasZtwWdyA" general="_43yMUrPAEeOdEasZtwWdyA"/>
+          <interfaceRealization xmi:id="_43_AoLPAEeOdEasZtwWdyA" name="Command" supplier="_42yGwbPAEeOdEasZtwWdyA" client="_40luYLPAEeOdEasZtwWdyA" contract="_42yGwbPAEeOdEasZtwWdyA"/>
+          <ownedOperation xmi:id="_43_nsbPAEeOdEasZtwWdyA" name="execute" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_402NELPAEeOdEasZtwWdyA" name="DestroyAllZombieCommand" clientDependency="_44AOwLPAEeOdEasZtwWdyA">
+          <generalization xmi:id="_44AOwbPAEeOdEasZtwWdyA" general="_43yMUrPAEeOdEasZtwWdyA"/>
+          <interfaceRealization xmi:id="_44AOwLPAEeOdEasZtwWdyA" name="Command" supplier="_42yGwbPAEeOdEasZtwWdyA" client="_402NELPAEeOdEasZtwWdyA" contract="_42yGwbPAEeOdEasZtwWdyA"/>
+          <ownedOperation xmi:id="_44AOwrPAEeOdEasZtwWdyA" name="execute" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_41AlILPAEeOdEasZtwWdyA" name="UpdateProgressCommand" clientDependency="_44A10LPAEeOdEasZtwWdyA">
+          <ownedComment xmi:id="_41BMMLPAEeOdEasZtwWdyA">
+            <body>/** 
+ * @ClassName: UpdateProgressCommand
+ * @Description: Progress of the tile
+ * @author Team A1
+ * @date 19 Mar 2014 13:20:22
+ */
+</body>
+          </ownedComment>
+          <generalization xmi:id="_44A10bPAEeOdEasZtwWdyA" general="_43yMUrPAEeOdEasZtwWdyA"/>
+          <interfaceRealization xmi:id="_44A10LPAEeOdEasZtwWdyA" name="Command" supplier="_42yGwbPAEeOdEasZtwWdyA" client="_41AlILPAEeOdEasZtwWdyA" contract="_42yGwbPAEeOdEasZtwWdyA"/>
+          <ownedOperation xmi:id="_44Bc4LPAEeOdEasZtwWdyA" name="execute" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_41JIALPAEeOdEasZtwWdyA" name="GenernateResourceCommand" clientDependency="_44CD8LPAEeOdEasZtwWdyA">
+          <ownedComment xmi:id="_41JvELPAEeOdEasZtwWdyA">
+            <body>/** 
+ * @ClassName: GenernateResourceCommand
+ * @Description: Generate resource in the building every certain period of time 
+ * @author Team A1
+ * @date 19 Mar 2014 13:14:41
+ */
+</body>
+          </ownedComment>
+          <generalization xmi:id="_44CD8bPAEeOdEasZtwWdyA" general="_43yMUrPAEeOdEasZtwWdyA"/>
+          <interfaceRealization xmi:id="_44CD8LPAEeOdEasZtwWdyA" name="Command" supplier="_42yGwbPAEeOdEasZtwWdyA" client="_41JIALPAEeOdEasZtwWdyA" contract="_42yGwbPAEeOdEasZtwWdyA"/>
+          <ownedOperation xmi:id="_44CrALPAEeOdEasZtwWdyA" name="execute" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_41fGQLPAEeOdEasZtwWdyA" name="ReadyCommand" clientDependency="_44DSELPAEeOdEasZtwWdyA">
+          <generalization xmi:id="_44DSEbPAEeOdEasZtwWdyA" general="_43yMUrPAEeOdEasZtwWdyA"/>
+          <interfaceRealization xmi:id="_44DSELPAEeOdEasZtwWdyA" name="Command" supplier="_42yGwbPAEeOdEasZtwWdyA" client="_41fGQLPAEeOdEasZtwWdyA" contract="_42yGwbPAEeOdEasZtwWdyA"/>
+          <ownedOperation xmi:id="_44D5ILPAEeOdEasZtwWdyA" name="execute" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_41z2YLPAEeOdEasZtwWdyA" name="BuildingCommand" clientDependency="_44EgMLPAEeOdEasZtwWdyA">
+          <ownedComment xmi:id="_410dcLPAEeOdEasZtwWdyA">
+            <body>/** 
+ * @ClassName: BuildingCommand
+ * @Description:  Building command , set the location and direction 
+ * of the buidling and add it to the map
+ * @author Team A1
+ * @date 19 Mar 2014 13:12:30
+ */
+</body>
+          </ownedComment>
+          <generalization xmi:id="_44EgMbPAEeOdEasZtwWdyA" general="_43yMUrPAEeOdEasZtwWdyA"/>
+          <interfaceRealization xmi:id="_44EgMLPAEeOdEasZtwWdyA" name="Command" supplier="_42yGwbPAEeOdEasZtwWdyA" client="_41z2YLPAEeOdEasZtwWdyA" contract="_42yGwbPAEeOdEasZtwWdyA"/>
+          <ownedOperation xmi:id="_44FHQLPAEeOdEasZtwWdyA" name="execute" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_419nYLPAEeOdEasZtwWdyA" name="ConsumeFoodCommand" clientDependency="_44FuULPAEeOdEasZtwWdyA">
+          <generalization xmi:id="_44FuUbPAEeOdEasZtwWdyA" general="_43yMUrPAEeOdEasZtwWdyA"/>
+          <interfaceRealization xmi:id="_44FuULPAEeOdEasZtwWdyA" name="Command" supplier="_42yGwbPAEeOdEasZtwWdyA" client="_419nYLPAEeOdEasZtwWdyA" contract="_42yGwbPAEeOdEasZtwWdyA"/>
+          <ownedOperation xmi:id="_44GVYLPAEeOdEasZtwWdyA" name="execute" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_42RwcLPAEeOdEasZtwWdyA" name="CreateCommand" clientDependency="_44G8cLPAEeOdEasZtwWdyA">
+          <ownedComment xmi:id="_42S-kLPAEeOdEasZtwWdyA">
+            <body>/** 
+ * @ClassName: CreateCommand
+ * @Description: Create a new tile instance(sprite) and add it to the tile manager 
+ * @author Team A1
+ * @date 19 Mar 2014 13:13:25
+ */
+</body>
+          </ownedComment>
+          <generalization xmi:id="_44G8cbPAEeOdEasZtwWdyA" general="_43yMUrPAEeOdEasZtwWdyA"/>
+          <interfaceRealization xmi:id="_44G8cLPAEeOdEasZtwWdyA" name="Command" supplier="_42yGwbPAEeOdEasZtwWdyA" client="_42RwcLPAEeOdEasZtwWdyA" contract="_42yGwbPAEeOdEasZtwWdyA"/>
+          <ownedOperation xmi:id="_44G8crPAEeOdEasZtwWdyA" name="execute" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_42dWoLPAEeOdEasZtwWdyA" name="GameEndCommand" clientDependency="_44IKkLPAEeOdEasZtwWdyA">
+          <generalization xmi:id="_44IKkbPAEeOdEasZtwWdyA" general="_43yMUrPAEeOdEasZtwWdyA"/>
+          <interfaceRealization xmi:id="_44IKkLPAEeOdEasZtwWdyA" name="Command" supplier="_42yGwbPAEeOdEasZtwWdyA" client="_42dWoLPAEeOdEasZtwWdyA" contract="_42yGwbPAEeOdEasZtwWdyA"/>
+          <ownedOperation xmi:id="_44IKkrPAEeOdEasZtwWdyA" name="execute" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_42iPILPAEeOdEasZtwWdyA" name="DestroyTileCommand" clientDependency="_44O4QLPAEeOdEasZtwWdyA">
+          <generalization xmi:id="_44O4QbPAEeOdEasZtwWdyA" general="_43yMUrPAEeOdEasZtwWdyA"/>
+          <interfaceRealization xmi:id="_44O4QLPAEeOdEasZtwWdyA" name="Command" supplier="_42yGwbPAEeOdEasZtwWdyA" client="_42iPILPAEeOdEasZtwWdyA" contract="_42yGwbPAEeOdEasZtwWdyA"/>
+          <ownedOperation xmi:id="_44QGYLPAEeOdEasZtwWdyA" name="execute" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_42jdQLPAEeOdEasZtwWdyA" name="AddFoodCommand" clientDependency="_44RUgLPAEeOdEasZtwWdyA">
+          <generalization xmi:id="_44RUgbPAEeOdEasZtwWdyA" general="_43yMUrPAEeOdEasZtwWdyA"/>
+          <interfaceRealization xmi:id="_44RUgLPAEeOdEasZtwWdyA" name="Command" supplier="_42yGwbPAEeOdEasZtwWdyA" client="_42jdQLPAEeOdEasZtwWdyA" contract="_42yGwbPAEeOdEasZtwWdyA"/>
+          <ownedOperation xmi:id="_44RUgrPAEeOdEasZtwWdyA" name="execute" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_42w4oLPAEeOdEasZtwWdyA" name="BarricadeCommand" clientDependency="_44R7kLPAEeOdEasZtwWdyA">
+          <ownedComment xmi:id="_42yGwLPAEeOdEasZtwWdyA">
+            <body>/** 
+ * @ClassName: BarricadeCommand
+ * @Description: Barricade command , set the location and direction 
+ * of the barricade and add it to the map
+ * @author Team A1
+ * @date 19 Mar 2014 11:45:22
+ */
+</body>
+          </ownedComment>
+          <generalization xmi:id="_44R7kbPAEeOdEasZtwWdyA" general="_43yMUrPAEeOdEasZtwWdyA"/>
+          <interfaceRealization xmi:id="_44R7kLPAEeOdEasZtwWdyA" name="Command" supplier="_42yGwbPAEeOdEasZtwWdyA" client="_42w4oLPAEeOdEasZtwWdyA" contract="_42yGwbPAEeOdEasZtwWdyA"/>
+          <ownedOperation xmi:id="_44SioLPAEeOdEasZtwWdyA" name="execute" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_42yGwbPAEeOdEasZtwWdyA" name="Command">
+          <ownedComment xmi:id="_4273wLPAEeOdEasZtwWdyA">
+            <body>/** 
+ * @ClassName: Command Interface
+ * @Description: Command Interface for different kind of command to be executed by themselves
+ * @author Team A1
+ * @date 19 Mar 2014 11:44:31
+ */
+</body>
+          </ownedComment>
+          <ownedOperation xmi:id="_44TJsLPAEeOdEasZtwWdyA" name="execute" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_43B-YLPAEeOdEasZtwWdyA" name="ConsumeResourceCommand" clientDependency="_44TwwLPAEeOdEasZtwWdyA">
+          <generalization xmi:id="_44TwwbPAEeOdEasZtwWdyA" general="_43yMUrPAEeOdEasZtwWdyA"/>
+          <interfaceRealization xmi:id="_44TwwLPAEeOdEasZtwWdyA" name="Command" supplier="_42yGwbPAEeOdEasZtwWdyA" client="_43B-YLPAEeOdEasZtwWdyA" contract="_42yGwbPAEeOdEasZtwWdyA"/>
+          <ownedOperation xmi:id="_44TwwrPAEeOdEasZtwWdyA" name="execute" visibility="public"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_43xlRrPAEeOdEasZtwWdyA" name="core">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_43yMULPAEeOdEasZtwWdyA" name="TileManager"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_43yMWrPAEeOdEasZtwWdyA" name="GameWorld"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_43yMUbPAEeOdEasZtwWdyA" name="factory">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_43yMUrPAEeOdEasZtwWdyA" name="CommandFactory"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_43yMU7PAEeOdEasZtwWdyA" name="maprender">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_43yMVLPAEeOdEasZtwWdyA" name="GridMap"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_43yMVbPAEeOdEasZtwWdyA" name="tile">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_43yMVrPAEeOdEasZtwWdyA" name="Sprite"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_43yMV7PAEeOdEasZtwWdyA" name="Tile"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_43yzZrPAEeOdEasZtwWdyA" name="Building"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_431PobPAEeOdEasZtwWdyA" name="Barricade"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_43yMW7PAEeOdEasZtwWdyA" name="player">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_43yzYLPAEeOdEasZtwWdyA" name="Team"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_430BgLPAEeOdEasZtwWdyA" name="Resource"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_43yzYbPAEeOdEasZtwWdyA" name="setting">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_43yzYrPAEeOdEasZtwWdyA" name="Config"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_43yzY7PAEeOdEasZtwWdyA" name="Constant"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_43yzZLPAEeOdEasZtwWdyA" name="Constant">
+          <packagedElement xmi:type="uml:DataType" xmi:id="_43yzZbPAEeOdEasZtwWdyA" name="PlayerRole"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_430BgbPAEeOdEasZtwWdyA" name="TileManagerState"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_431PoLPAEeOdEasZtwWdyA" name="BarricadeDirection"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_43zacLPAEeOdEasZtwWdyA" name="net">
+        <packagedElement xmi:type="uml:Package" xmi:id="_43zacbPAEeOdEasZtwWdyA" name="core">
+          <packagedElement xmi:type="uml:DataType" xmi:id="_43zacrPAEeOdEasZtwWdyA" name="NetConstant"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_43zac7PAEeOdEasZtwWdyA" name="NetUtil"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_43xlQLPAEeOdEasZtwWdyA" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_43xlQbPAEeOdEasZtwWdyA" name="io">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_43xlQrPAEeOdEasZtwWdyA" name="IOException"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_43xlQ7PAEeOdEasZtwWdyA" name="Serializable"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_43xlRLPAEeOdEasZtwWdyA" name="util">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_43xlRbPAEeOdEasZtwWdyA" name="UUID"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_43yMWLPAEeOdEasZtwWdyA" name="awt">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_43yMWbPAEeOdEasZtwWdyA" name="Point"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

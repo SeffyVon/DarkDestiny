@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_-1TeMLPBEeOdEasZtwWdyA">
+  <name xsi:nil="true"/>
+  <elementImport xmi:id="_-2QgcrPBEeOdEasZtwWdyA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+  </elementImport>
+  <elementImport xmi:id="_-2X1MLPBEeOdEasZtwWdyA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_-2ZDULPBEeOdEasZtwWdyA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_-2fJ8LPBEeOdEasZtwWdyA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_-1UFQLPBEeOdEasZtwWdyA" name="com">
+    <packagedElement xmi:type="uml:Package" xmi:id="_-1UFQbPBEeOdEasZtwWdyA" name="darkdensity">
+      <packagedElement xmi:type="uml:Package" xmi:id="_-1UFQrPBEeOdEasZtwWdyA" name="sound">
+        <packagedElement xmi:type="uml:Class" xmi:id="_-1VTYLPBEeOdEasZtwWdyA" name="SoundPlayer">
+          <ownedAttribute xmi:id="_-2MPALPBEeOdEasZtwWdyA" name="format" visibility="private" type="_-11Cq7PBEeOdEasZtwWdyA"/>
+          <ownedAttribute xmi:id="_-2NdILPBEeOdEasZtwWdyA" name="threadPool" visibility="private" type="_-11Cp7PBEeOdEasZtwWdyA"/>
+          <ownedAttribute xmi:id="_-2OrQLPBEeOdEasZtwWdyA" name="inputStream" visibility="private" type="_-11CpLPBEeOdEasZtwWdyA"/>
+          <ownedOperation xmi:id="_-2PSULPBEeOdEasZtwWdyA" name="play" visibility="public"/>
+          <ownedOperation xmi:id="_-2P5YLPBEeOdEasZtwWdyA" name="run" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_-1WhgLPBEeOdEasZtwWdyA" name="MusicPlayer">
+          <generalization xmi:id="_-2QgcbPBEeOdEasZtwWdyA" general="_-2QgcLPBEeOdEasZtwWdyA"/>
+          <ownedAttribute xmi:id="_-2RukLPBEeOdEasZtwWdyA" name="STATUS" visibility="public" isStatic="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_-2TjwLPBEeOdEasZtwWdyA" name="PAUSED" visibility="public" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_-2TjwbPBEeOdEasZtwWdyA" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_-2Ux4LPBEeOdEasZtwWdyA" name="STOPED" visibility="public" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_-2Ux4bPBEeOdEasZtwWdyA" value="2"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_-2WnELPBEeOdEasZtwWdyA" name="PLAYING" visibility="public" isStatic="true" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_-2WnEbPBEeOdEasZtwWdyA" value="3"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_-2YcQLPBEeOdEasZtwWdyA" name="filename" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_-2ZqYLPBEeOdEasZtwWdyA" name="isLoop" visibility="private" isStatic="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_-2ZqYbPBEeOdEasZtwWdyA"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_-2aRcLPBEeOdEasZtwWdyA" name="EXTERNAL_BUFFER_SIZE" visibility="private" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_-2aRcbPBEeOdEasZtwWdyA" value="524288"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_-2bfkLPBEeOdEasZtwWdyA" name="setMusicStop" visibility="public"/>
+          <ownedOperation xmi:id="_-2bfkbPBEeOdEasZtwWdyA" name="setMusicPause" visibility="public"/>
+          <ownedOperation xmi:id="_-2cGoLPBEeOdEasZtwWdyA" name="setMusicPlay" visibility="public"/>
+          <ownedOperation xmi:id="_-2dUwLPBEeOdEasZtwWdyA" name="run" visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_-1XvoLPBEeOdEasZtwWdyA" name="Sound">
+          <ownedComment xmi:id="_-1YWsLPBEeOdEasZtwWdyA">
+            <body>/** 
+ * The Sound class use for contain a sound's sample byte array
+ */
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_-2ei4LPBEeOdEasZtwWdyA" name="format" visibility="private" type="_-11Cq7PBEeOdEasZtwWdyA"/>
+          <ownedAttribute xmi:id="_-2fJ8bPBEeOdEasZtwWdyA" name="samples" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-2fJ8rPBEeOdEasZtwWdyA" value="*"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-2fJ87PBEeOdEasZtwWdyA"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_-2fxALPBEeOdEasZtwWdyA" name="getSamples" visibility="public">
+            <ownedParameter xmi:id="_-2fxAbPBEeOdEasZtwWdyA" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_-2gYELPBEeOdEasZtwWdyA" name="getFormat" visibility="public">
+            <ownedParameter xmi:id="_-2gYEbPBEeOdEasZtwWdyA" name="return" type="_-11Cq7PBEeOdEasZtwWdyA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_-2g_ILPBEeOdEasZtwWdyA" name="getSamples" visibility="private">
+            <ownedComment xmi:id="_-2g_I7PBEeOdEasZtwWdyA">
+              <body>/** 
+ * Gets the samples from an AudioInputStream as an array of bytes.
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_-2g_IbPBEeOdEasZtwWdyA" name="audioStream" type="_-11ps7PBEeOdEasZtwWdyA"/>
+            <ownedParameter xmi:id="_-2g_IrPBEeOdEasZtwWdyA" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_-1Y9wLPBEeOdEasZtwWdyA" name="LoopByteArrayInputStream">
+          <ownedComment xmi:id="_-1Zk0LPBEeOdEasZtwWdyA">
+            <body>/** 
+ * The LoopingByteInputStream is a ByteArrayInputStream that
+ * loops indefinitly. The looping stops when the close() method
+ * is called.
+ * &lt;p>Possible ideas to extend this class:&lt;ul>
+ * &lt;li>Add an option to only loop a certain number of times.
+ * &lt;/ul>
+ */
+</body>
+          </ownedComment>
+          <generalization xmi:id="_-2g_JLPBEeOdEasZtwWdyA" general="_-11CorPBEeOdEasZtwWdyA"/>
+          <ownedAttribute xmi:id="_-2hmMLPBEeOdEasZtwWdyA" name="closed" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_-2iNQLPBEeOdEasZtwWdyA" name="limitedTime" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_-2iNQbPBEeOdEasZtwWdyA"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_-2jbYLPBEeOdEasZtwWdyA" name="repeatTimes" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_-2jbYbPBEeOdEasZtwWdyA" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_-2kCcLPBEeOdEasZtwWdyA" name="currentTimes" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_-2kCcbPBEeOdEasZtwWdyA"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_-2lQkLPBEeOdEasZtwWdyA" name="read" visibility="public">
+            <ownedComment xmi:id="_-2l3oLPBEeOdEasZtwWdyA">
+              <body>/** 
+ * @Description: read bytes from the array,only stop when closed is
+ * set to true
+ * Returns -1 if the array hasbeen closed.
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_-2lQkbPBEeOdEasZtwWdyA" name="buffer">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-2lQkrPBEeOdEasZtwWdyA" value="*"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-2lQk7PBEeOdEasZtwWdyA"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_-2lQlLPBEeOdEasZtwWdyA" name="offset">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_-2lQlbPBEeOdEasZtwWdyA" name="length">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_-2lQlrPBEeOdEasZtwWdyA" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_-2l3obPBEeOdEasZtwWdyA" name="close" visibility="public">
+            <ownedComment xmi:id="_-2mesLPBEeOdEasZtwWdyA">
+              <body>/** 
+ * @Description: Closes the stream
+ */
+</body>
+            </ownedComment>
+          </ownedOperation>
+          <ownedOperation xmi:id="_-2mesbPBEeOdEasZtwWdyA" name="setRepeatTimes" visibility="public">
+            <ownedComment xmi:id="_-2mes7PBEeOdEasZtwWdyA">
+              <body>/** 
+ * @Title: setRepeatTimes 
+ * @Description: make the LoopByteInputStream
+ * only loop a certain number of times.
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_-2mesrPBEeOdEasZtwWdyA" name="times">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_-11ptLPBEeOdEasZtwWdyA" name="setting">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_-11ptbPBEeOdEasZtwWdyA" name="Config"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_-11CoLPBEeOdEasZtwWdyA" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_-11CobPBEeOdEasZtwWdyA" name="io">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_-11CorPBEeOdEasZtwWdyA" name="ByteArrayInputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_-11Co7PBEeOdEasZtwWdyA" name="IOException"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_-11CpLPBEeOdEasZtwWdyA" name="InputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_-11psrPBEeOdEasZtwWdyA" name="File"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_-11ptrPBEeOdEasZtwWdyA" name="DataInputStream"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_-11CpbPBEeOdEasZtwWdyA" name="util">
+      <packagedElement xmi:type="uml:Package" xmi:id="_-11CprPBEeOdEasZtwWdyA" name="concurrent">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_-11Cp7PBEeOdEasZtwWdyA" name="ExecutorService"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_-11CqLPBEeOdEasZtwWdyA" name="javax">
+    <packagedElement xmi:type="uml:Package" xmi:id="_-11CqbPBEeOdEasZtwWdyA" name="sound">
+      <packagedElement xmi:type="uml:Package" xmi:id="_-11CqrPBEeOdEasZtwWdyA" name="sampled">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_-11Cq7PBEeOdEasZtwWdyA" name="AudioFormat"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_-11CrLPBEeOdEasZtwWdyA" name="AudioSystem"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_-11CrbPBEeOdEasZtwWdyA" name="DataLine"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_-11psLPBEeOdEasZtwWdyA" name="LineUnavailableException"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_-11psbPBEeOdEasZtwWdyA" name="SourceDataLine"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_-11ps7PBEeOdEasZtwWdyA" name="AudioInputStream"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_-11pt7PBEeOdEasZtwWdyA" name="UnsupportedAudioFileException"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_-2QgcLPBEeOdEasZtwWdyA" name="Thread"/>
+</uml:Model>

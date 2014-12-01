@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_o8W08LPBEeOdEasZtwWdyA">
+  <name xsi:nil="true"/>
+  <elementImport xmi:id="_o9doMLPBEeOdEasZtwWdyA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_o9grgLPBEeOdEasZtwWdyA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+  </elementImport>
+  <elementImport xmi:id="_o9sRsLPBEeOdEasZtwWdyA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_o92pwrPBEeOdEasZtwWdyA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_o93Q0LPBEeOdEasZtwWdyA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_o8W08bPBEeOdEasZtwWdyA" name="com">
+    <packagedElement xmi:type="uml:Package" xmi:id="_o8W08rPBEeOdEasZtwWdyA" name="darkdensity">
+      <packagedElement xmi:type="uml:Package" xmi:id="_o8W087PBEeOdEasZtwWdyA" name="maprender">
+        <packagedElement xmi:type="uml:Class" xmi:id="_o8W09LPBEeOdEasZtwWdyA" name="GridMap">
+          <ownedComment xmi:id="_o8btcLPBEeOdEasZtwWdyA">
+            <body>/** 
+ * @ClassName: GridMap
+ * @Description: GridMap is the matrix of the grid, 
+ * it contains the information of the map
+ * @author Team A1
+ * @date 19 Mar 2014 15:52:07
+ */
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_o9caELPBEeOdEasZtwWdyA" name="map" visibility="private" isStatic="true" type="_o9ak4LPBEeOdEasZtwWdyA"/>
+          <ownedAttribute xmi:id="_o9e2ULPBEeOdEasZtwWdyA" name="completed" visibility="private" isStatic="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_o9e2UbPBEeOdEasZtwWdyA"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_o9grgbPBEeOdEasZtwWdyA" name="getGrid" visibility="public" isStatic="true">
+            <ownedComment xmi:id="_o9igsLPBEeOdEasZtwWdyA">
+              <body>/** 
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_o9grgrPBEeOdEasZtwWdyA" name="tileX">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_o9grg7PBEeOdEasZtwWdyA" name="tileY">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_o9grhLPBEeOdEasZtwWdyA" name="return" type="_o8k3YLPBEeOdEasZtwWdyA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_o9igsbPBEeOdEasZtwWdyA" name="getGrids" visibility="public">
+            <ownedComment xmi:id="_o9kV4LPBEeOdEasZtwWdyA">
+              <body>/** 
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_o9igsrPBEeOdEasZtwWdyA" name="tileX">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_o9igs7PBEeOdEasZtwWdyA" name="tileY">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_o9igtLPBEeOdEasZtwWdyA" name="return" type="_o89R6LPBEeOdEasZtwWdyA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_o9kV4bPBEeOdEasZtwWdyA" name="getRandomPoint" visibility="public">
+            <ownedComment xmi:id="_o9lkALPBEeOdEasZtwWdyA">
+              <body>/** 
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_o9kV4rPBEeOdEasZtwWdyA" name="return" type="_o89R4rPBEeOdEasZtwWdyA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_o9lkAbPBEeOdEasZtwWdyA" name="getRandomGrid" visibility="public">
+            <ownedComment xmi:id="_o9myILPBEeOdEasZtwWdyA">
+              <body>/** 
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_o9lkArPBEeOdEasZtwWdyA" name="return" type="_o8k3YLPBEeOdEasZtwWdyA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_o9nZMLPBEeOdEasZtwWdyA" name="add" visibility="public" isStatic="true">
+            <ownedComment xmi:id="_o9onULPBEeOdEasZtwWdyA">
+              <body>/** 
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_o9nZMbPBEeOdEasZtwWdyA" name="tile" type="_o89487PBEeOdEasZtwWdyA"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_o9onUbPBEeOdEasZtwWdyA" name="remove" visibility="public" isStatic="true">
+            <ownedParameter xmi:id="_o9onUrPBEeOdEasZtwWdyA" name="tile" type="_o89487PBEeOdEasZtwWdyA"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_o9qcgLPBEeOdEasZtwWdyA" name="updateGrid" visibility="public">
+            <ownedParameter xmi:id="_o9qcgbPBEeOdEasZtwWdyA" name="s" type="_o8948rPBEeOdEasZtwWdyA"/>
+            <ownedParameter xmi:id="_o9qcgrPBEeOdEasZtwWdyA" name="prevPosPoint" type="_o89R4rPBEeOdEasZtwWdyA"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_o9sRsbPBEeOdEasZtwWdyA" name="readMapJSON" visibility="public">
+            <ownedComment xmi:id="_o9tf0LPBEeOdEasZtwWdyA">
+              <body>/** 
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_o9sRsrPBEeOdEasZtwWdyA" name="mapPath">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_o9tf0bPBEeOdEasZtwWdyA" name="isCompleted" visibility="public" isStatic="true">
+            <ownedComment xmi:id="_o9vVALPBEeOdEasZtwWdyA">
+              <body>/** 
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_o9tf0rPBEeOdEasZtwWdyA" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_o9v8ELPBEeOdEasZtwWdyA" name="getMap" visibility="public" isStatic="true">
+            <ownedParameter xmi:id="_o9v8EbPBEeOdEasZtwWdyA" name="return" type="_o89R6bPBEeOdEasZtwWdyA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_o9xKMLPBEeOdEasZtwWdyA" name="getClosestPoint" visibility="public">
+            <ownedComment xmi:id="_o9y_YLPBEeOdEasZtwWdyA">
+              <body>/** 
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_o9xKMbPBEeOdEasZtwWdyA" name="x">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_o9xKMrPBEeOdEasZtwWdyA" name="y">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_o9xKM7PBEeOdEasZtwWdyA" name="return" type="_o89R4rPBEeOdEasZtwWdyA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_o9y_YbPBEeOdEasZtwWdyA" name="blockInBetween" visibility="public">
+            <ownedComment xmi:id="_o900kLPBEeOdEasZtwWdyA">
+              <body>/** 
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_o9y_YrPBEeOdEasZtwWdyA" name="bPoint" type="_o89R4rPBEeOdEasZtwWdyA"/>
+            <ownedParameter xmi:id="_o9y_Y7PBEeOdEasZtwWdyA" name="ePoint" type="_o89R4rPBEeOdEasZtwWdyA"/>
+            <ownedParameter xmi:id="_o9y_ZLPBEeOdEasZtwWdyA" name="size">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_o9y_ZbPBEeOdEasZtwWdyA" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_o900kbPBEeOdEasZtwWdyA" name="getZombieBasePoint" visibility="public">
+            <ownedParameter xmi:id="_o900krPBEeOdEasZtwWdyA" name="return" type="_o89R4rPBEeOdEasZtwWdyA" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_o8k3YLPBEeOdEasZtwWdyA" name="Grid">
+          <ownedComment xmi:id="_o8k3YbPBEeOdEasZtwWdyA">
+            <body>/** 
+ * @ClassName: Grid
+ * @Description: A gird is a linked list of tiles
+ * @author Team A1
+ * @date 19 Mar 2014 15:51:11
+ */
+</body>
+          </ownedComment>
+          <generalization xmi:id="_o92pwbPBEeOdEasZtwWdyA" general="_o92pwLPBEeOdEasZtwWdyA"/>
+          <ownedAttribute xmi:id="_o92pw7PBEeOdEasZtwWdyA" name="blocked" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_o93Q0bPBEeOdEasZtwWdyA" name="isBlocked" visibility="public">
+            <ownedParameter xmi:id="_o93Q0rPBEeOdEasZtwWdyA" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_o93Q07PBEeOdEasZtwWdyA" name="block" visibility="public"/>
+          <ownedOperation xmi:id="_o9334LPBEeOdEasZtwWdyA" name="release" visibility="public"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_o89R67PBEeOdEasZtwWdyA" name="core">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_o89R7LPBEeOdEasZtwWdyA" name="GridMapManager"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_o89R7bPBEeOdEasZtwWdyA" name="setting">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_o89R7rPBEeOdEasZtwWdyA" name="Config"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_o89R77PBEeOdEasZtwWdyA" name="Constant"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_o8948LPBEeOdEasZtwWdyA" name="tile">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_o8948bPBEeOdEasZtwWdyA" name="Barricade"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_o8948rPBEeOdEasZtwWdyA" name="Sprite"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_o89487PBEeOdEasZtwWdyA" name="Tile"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_o8949LPBEeOdEasZtwWdyA" name="eclipsesource">
+      <packagedElement xmi:type="uml:Package" xmi:id="_o8949bPBEeOdEasZtwWdyA" name="json">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_o8949rPBEeOdEasZtwWdyA" name="JsonArray"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_o89497PBEeOdEasZtwWdyA" name="JsonObject"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_o894-LPBEeOdEasZtwWdyA" name="JsonValue"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_o89R4LPBEeOdEasZtwWdyA" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_o89R4bPBEeOdEasZtwWdyA" name="awt">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_o89R4rPBEeOdEasZtwWdyA" name="Point"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_o89R47PBEeOdEasZtwWdyA" name="io">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_o89R5LPBEeOdEasZtwWdyA" name="FileNotFoundException"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_o89R5bPBEeOdEasZtwWdyA" name="FileReader"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_o89R5rPBEeOdEasZtwWdyA" name="IOException"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_o89R57PBEeOdEasZtwWdyA" name="util">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_o89R6LPBEeOdEasZtwWdyA" name="ArrayList"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_o89R6bPBEeOdEasZtwWdyA" name="HashMap"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_o89R6rPBEeOdEasZtwWdyA" name="Random"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_o894-bPBEeOdEasZtwWdyA" name="LinkedList"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_o9ak4LPBEeOdEasZtwWdyA" name="HashMap&lt;Point,Grid>"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_o92pwLPBEeOdEasZtwWdyA" name="LinkedList&lt;Tile>"/>
+</uml:Model>

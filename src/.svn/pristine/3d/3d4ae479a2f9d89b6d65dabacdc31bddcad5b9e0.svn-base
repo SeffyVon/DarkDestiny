@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_SkdwcLPCEeOdEasZtwWdyA">
+  <name xsi:nil="true"/>
+  <elementImport xmi:id="_SlPMgLPCEeOdEasZtwWdyA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_SlQaoLPCEeOdEasZtwWdyA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+  </elementImport>
+  <elementImport xmi:id="_SlS24bPCEeOdEasZtwWdyA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_SkdwcbPCEeOdEasZtwWdyA" name="com">
+    <packagedElement xmi:type="uml:Package" xmi:id="_SkeXgLPCEeOdEasZtwWdyA" name="darkdensity">
+      <packagedElement xmi:type="uml:Package" xmi:id="_SkeXgbPCEeOdEasZtwWdyA" name="util">
+        <packagedElement xmi:type="uml:Class" xmi:id="_Ske-kLPCEeOdEasZtwWdyA" name="ImageLoader">
+          <ownedComment xmi:id="_SkfloLPCEeOdEasZtwWdyA">
+            <body>/** 
+ * @ClassName: ImageLoader
+ * @Description: Load Image
+ * @author Team A1,Birmingham University
+ * @date 2014/2/1 16:57:41
+ * *
+ * Attributes:
+ * private static Map&lt;String, Image> IMAGE_CACHE = new HashMap&lt;String, Image>();
+ * *
+ * Methods:
+ * public static Image loadImage(String filePath) {}
+ */
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:id="_SlOlcLPCEeOdEasZtwWdyA" name="IMAGE_CACHE" visibility="private" isStatic="true" type="_SlN-YLPCEeOdEasZtwWdyA"/>
+          <ownedOperation xmi:id="_SlPMgbPCEeOdEasZtwWdyA" name="loadImage" visibility="public" isStatic="true">
+            <ownedComment xmi:id="_SlPzkLPCEeOdEasZtwWdyA">
+              <body>/** 
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_SlPMgrPCEeOdEasZtwWdyA" name="filePath">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_SlPMg7PCEeOdEasZtwWdyA" name="return" type="_Sk6cYbPCEeOdEasZtwWdyA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_SlQaobPCEeOdEasZtwWdyA" name="resize" visibility="public" isStatic="true">
+            <ownedComment xmi:id="_SlQaprPCEeOdEasZtwWdyA">
+              <body>/** 
+ */
+</body>
+            </ownedComment>
+            <ownedParameter xmi:id="_SlQaorPCEeOdEasZtwWdyA" name="srcImg" type="_Sk6cYbPCEeOdEasZtwWdyA"/>
+            <ownedParameter xmi:id="_SlQao7PCEeOdEasZtwWdyA" name="w">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_SlQapLPCEeOdEasZtwWdyA" name="h">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_SlQapbPCEeOdEasZtwWdyA" name="return" type="_Sk6cYbPCEeOdEasZtwWdyA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_SlRBsLPCEeOdEasZtwWdyA" name="getImageIcon" visibility="public" isStatic="true">
+            <ownedParameter xmi:id="_SlRBsbPCEeOdEasZtwWdyA" name="filePath">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_SlRBsrPCEeOdEasZtwWdyA" name="return" type="_Sk6carPCEeOdEasZtwWdyA" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_SkgzwLPCEeOdEasZtwWdyA" name="Pair">
+          <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="_SkgzwbPCEeOdEasZtwWdyA" parameter="_SkgzwrPCEeOdEasZtwWdyA _SkgzxLPCEeOdEasZtwWdyA">
+            <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_SkgzwrPCEeOdEasZtwWdyA" parameteredElement="_Skgzw7PCEeOdEasZtwWdyA">
+              <ownedParameteredElement xmi:type="uml:Class" xmi:id="_Skgzw7PCEeOdEasZtwWdyA" name="FST" templateParameter="_SkgzwrPCEeOdEasZtwWdyA"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_SkgzxLPCEeOdEasZtwWdyA" parameteredElement="_SkgzxbPCEeOdEasZtwWdyA">
+              <ownedParameteredElement xmi:type="uml:Class" xmi:id="_SkgzxbPCEeOdEasZtwWdyA" name="SND" templateParameter="_SkgzxLPCEeOdEasZtwWdyA"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+          <ownedAttribute xmi:id="_SlRowLPCEeOdEasZtwWdyA" name="fst" visibility="public" type="_Skgzw7PCEeOdEasZtwWdyA" isReadOnly="true"/>
+          <ownedAttribute xmi:id="_SlSP0LPCEeOdEasZtwWdyA" name="snd" visibility="public" type="_SkgzxbPCEeOdEasZtwWdyA" isReadOnly="true"/>
+          <ownedOperation xmi:id="_SlSP0bPCEeOdEasZtwWdyA" name="hashCode" visibility="public">
+            <ownedParameter xmi:id="_SlSP0rPCEeOdEasZtwWdyA" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_SlS24rPCEeOdEasZtwWdyA" name="equals" visibility="public">
+            <ownedParameter xmi:id="_SlS247PCEeOdEasZtwWdyA" name="o" type="_SlS24LPCEeOdEasZtwWdyA"/>
+            <ownedParameter xmi:id="_SlS25LPCEeOdEasZtwWdyA" name="return" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_Sk51ULPCEeOdEasZtwWdyA" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_Sk51UbPCEeOdEasZtwWdyA" name="awt">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Sk6cYLPCEeOdEasZtwWdyA" name="Graphics2D"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Sk6cYbPCEeOdEasZtwWdyA" name="Image"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Sk6cYrPCEeOdEasZtwWdyA" name="RenderingHints"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_Sk6cY7PCEeOdEasZtwWdyA" name="image">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_Sk6cZLPCEeOdEasZtwWdyA" name="BufferedImage"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Sk6cZbPCEeOdEasZtwWdyA" name="util">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Sk6cZrPCEeOdEasZtwWdyA" name="HashMap"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Sk6cZ7PCEeOdEasZtwWdyA" name="Map"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_Sk6caLPCEeOdEasZtwWdyA" name="javax">
+    <packagedElement xmi:type="uml:Package" xmi:id="_Sk6cabPCEeOdEasZtwWdyA" name="swing">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_Sk6carPCEeOdEasZtwWdyA" name="ImageIcon"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_SlN-YLPCEeOdEasZtwWdyA" name="Map&lt;String,Image>"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_SlS24LPCEeOdEasZtwWdyA" name="Object"/>
+</uml:Model>

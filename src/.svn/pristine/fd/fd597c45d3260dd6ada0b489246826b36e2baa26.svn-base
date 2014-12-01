@@ -1,0 +1,359 @@
+### Eclipse Workspace Patch 1.0
+#P Issac
+Index: src/com/darkdensity/gui/GamePanel.java
+===================================================================
+--- src/com/darkdensity/gui/GamePanel.java	(revision 90)
++++ src/com/darkdensity/gui/GamePanel.java	(working copy)
+@@ -1,7 +1,6 @@
+ package com.darkdensity.gui;
+ 
+ import java.awt.Color;
+-import java.awt.Graphics;
+ import java.awt.Graphics2D;
+ import java.awt.Robot;
+ import java.awt.event.KeyEvent;
+@@ -19,6 +18,7 @@
+ import com.darkdensity.core.ResourceManager;
+ import com.darkdensity.maprender.GridMap;
+ import com.darkdensity.maprender.Map;
++import com.darkdensity.net.chat.ChatPanel;
+ import com.darkdensity.setting.Config;
+ 
+ /*
+@@ -31,24 +31,26 @@
+  * public void monitorInput(){}
+  */
+ 
+-public class GamePanel extends Abstractpanel {
++public class GamePanel extends JLayeredPane {
+ 	private final int gameMode;
+ 	private ControlManager controlManager;
+ 	private MapPanel mapPanel;
+ 	private MiniMapPanel miniMapPanel;
+ 	private boolean isRunning = true;
+ 	private Map map;
+-	GridMap gridmap;
+-	GridMapManager gridMapRender;
++	private JFrame frame;
++	// GridMap gridmap;
++	// GridMapManager gridMapRender;
+ 	BufferStrategy strategy;
+-	// Control control;
+-	// ConsolePanel controlPanel;
++	private ChatPanel chatPanel;
++
+ 	Robot robot;
+ 	Thread gameWorldThread;
+ 
+ 	public GamePanel(JFrame frame, int gameMode) {
+-		super(frame);
++		this.frame = frame;
+ 		setLayout(null);
++		setSize(frame.getWidth(), frame.getHeight());
+ 		this.gameMode = gameMode;
+ 		init();
+ 
+@@ -86,36 +88,19 @@
+ 		add(mapPanel, JLayeredPane.DEFAULT_LAYER);
+ 		add(miniMapPanel, JLayeredPane.PALETTE_LAYER);
+ 
+-		JPanel tpanel = new JPanel();
+-		tpanel.setLocation(0, 300);
+-		tpanel.setSize(1280, 300);
+-		tpanel.setBackground(Color.RED);
+-		tpanel.setVisible(true);
+-
+-		JTextField tf = new JTextField(20);
+-
+-		tf.setLocation(0, 0);
+-		tpanel.add(tf);
+-
+-		add(tpanel,MODAL_LAYER);
+-
+-		// this.frame.setComponentZOrder(mapPanel, 2);
+-		// this.frame.setComponentZOrder(miniMapPanel, 1);
+-		// setComponentZOrder(tpanel, 0);
++		chatPanel = new ChatPanel();
++		chatPanel.setLocation(0, getHeight() - chatPanel.getHeight());
++		chatPanel.setVisible(true);
++		add(chatPanel, MODAL_LAYER);
+ 
+ 		map = mapPanel.getMap();
+ 
+-		gridmap = ResourceManager.resourceManager.getGridMap();
+-		gridMapRender = gridmap.getTileMapRender();
+-		gridMapRender.screenWidth = getWidth();
+-		gridMapRender.screenHeight = getHeight();
++		/*
++		 * gridmap = ResourceManager.resourceManager.getGridMap(); gridMapRender
++		 * = gridmap.getTileMapRender(); gridMapRender.screenWidth = getWidth();
++		 * gridMapRender.screenHeight = getHeight();
++		 */
+ 
+-		// gridmap.buildSprite(new Survivor() , icon, new UUID(2, 3));
+-
+-		// controlPanel = new ConsolePanel(gridMapRender);
+-		// controlPanel.setLocation(getWidth() - controlPanel.getWidth(), 0);
+-		// add(controlPanel);
+-		//setComponentZOrder(miniMapPanel, 0);
+ 	}
+ 
+ 	public void gameLoop() {
+@@ -149,28 +134,9 @@
+ 
+ 	}
+ 
+-	/*
+-	@Override
+-	public void paintComponent(Graphics g) {
+-		super.paintComponent(g);
+-		mapPanel.paintComponent(g);
+-		miniMapPanel.paintComponent(g);
+-		gridMapRender.draw((Graphics2D) g);
+-
+-	}
+-	*/
+-
+-	@Override
+ 	public void update(long elapsedTime) {
+-		super.update(elapsedTime);
+-		gridMapRender.update(elapsedTime);
+-		// mapPanel.repaint();
+-		// miniMapPanel.repaint();
+-	}
++		// gridMapRender.update(elapsedTime);
+ 
+-	@Override
+-	public void reset() {
+-		super.reset();
+ 	}
+ 
+ 	public void cameraScolling() {
+@@ -192,50 +158,41 @@
+ 
+ 		if (actualX == 0 && iRenderX > 0) {
+ 			iRenderX = iRenderX - SCREEN_MOVE_SPEED;
+-			gridMapRender.offsetX += SCREEN_MOVE_SPEED;
++			// gridMapRender.offsetX += SCREEN_MOVE_SPEED;
+ 		}
+ 		if (actualX > frameRight
+ 				&& iRenderX < (map.mapWidthPx - Config.PANEL_WIDTH - Config.SENSITIVE_AREA)) {
+ 			iRenderX = iRenderX + SCREEN_MOVE_SPEED;
+-			gridMapRender.offsetX -= SCREEN_MOVE_SPEED;
++			// gridMapRender.offsetX -= SCREEN_MOVE_SPEED;
+ 		}
+ 		if (actualY == 0 && iRenderY > 0) {
+ 			iRenderY = iRenderY - SCREEN_MOVE_SPEED;
+-			gridMapRender.offsetY -= SCREEN_MOVE_SPEED;
++			// gridMapRender.offsetY -= SCREEN_MOVE_SPEED;
+ 		}
+ 		if (actualY > frameDown
+ 				&& iRenderY < (map.mapHeightPx - Config.PANEL_HEIGHT - Config.SENSITIVE_AREA)) {
+ 			iRenderY = iRenderY + SCREEN_MOVE_SPEED;
+-			gridMapRender.offsetY += SCREEN_MOVE_SPEED;
++			// gridMapRender.offsetY += SCREEN_MOVE_SPEED;
+ 		}
+ 
+ 		map.iRenderX = iRenderX;
+ 		map.iRenderY = iRenderY;
+-		gridMapRender.moveX = getX();
+-		gridMapRender.moveY = getY();
++		// gridMapRender.moveX = getX();
++		// gridMapRender.moveY = getY();
+ 		miniMapPanel.setRectangleXY(iRenderX, iRenderY);
+-		gridMapRender.iRenderX = iRenderX;
+-		gridMapRender.iRenderY = iRenderY;
++		// gridMapRender.iRenderX = iRenderX;
++		// gridMapRender.iRenderY = iRenderY;
+ 
+ 	}
+ 
+ 	private void redrawScreen(Graphics2D g) {
+-		// draw the map first
+-		// //System.out.print("redrawScreen");
+-		// map.redraw(g, getWidth(), getHeight());
+-		
+ 		mapPanel.paintComponent(g);
+-		gridMapRender.redraw(g);
++		// gridMapRender.redraw(g);
+ 		miniMapPanel.paintComponent(g);
+ 		// draw the dragging rectangle
+ 		controlManager.dragActionDrawer(g);
+ 		this.paint(g);
+-		// draw the mini map
+-		// miniMapPanel.redraw(g);
+-		// strategy = getBufferStrategy();
+-		// testSpritePanel.draw(strategy);
+-		// mapPanel.repaint();
+-		// miniMapPanel.repaint();
++
+ 	}
+ 
+ 	public void exitGameWorld() {
+Index: src/com/darkdensity/net/chat/ChatPanel.java
+===================================================================
+--- src/com/darkdensity/net/chat/ChatPanel.java	(revision 90)
++++ src/com/darkdensity/net/chat/ChatPanel.java	(working copy)
+@@ -16,8 +16,9 @@
+ 
+ import com.darkdensity.setting.Config;
+ 
+-public class ChatClient extends JFrame {
++public class ChatPanel extends JPanel {
+ 	// TODO: change the udp address, and other variable into config.java
++	private final Color fillColor = new Color(0, 0, 0, 70);
+ 	BufferedImage buffer = null;
+ 	static ChatManager cm;
+ 	static JTextField tf;
+@@ -27,11 +28,10 @@
+ 	private final int width = 400;
+ 	private final int height = 230;
+ 
+-	public ChatClient() {
++	public ChatPanel() {
+ 		cm = new ChatManager();
+-		JPanel jPanel = new JPanel();
+-		this.setContentPane(jPanel);
+-		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
++
++		this.setBackground(fillColor);
+ 		tv = new JTextArea(10, 30);
+ 		Border border = BorderFactory.createLineBorder(Color.BLACK, 1);
+ 		tv.setBorder(border);
+@@ -83,9 +83,4 @@
+ 		}
+ 	}
+ 
+-	public void redraw() {
+-		this.getParent().add(this);
+-		this.setVisible(true);
+-
+-	}
+ }
+Index: src/com/darkdensity/net/chat/ChatClient.java
+===================================================================
+--- src/com/darkdensity/net/chat/ChatClient.java	(revision 90)
++++ src/com/darkdensity/net/chat/ChatClient.java	(working copy)
+@@ -1,91 +0,0 @@
+-package com.darkdensity.net.chat;
+-
+-import java.awt.Color;
+-import java.awt.event.ActionEvent;
+-import java.awt.event.ActionListener;
+-import java.awt.image.BufferedImage;
+-
+-import javax.swing.BorderFactory;
+-import javax.swing.JButton;
+-import javax.swing.JFrame;
+-import javax.swing.JLabel;
+-import javax.swing.JPanel;
+-import javax.swing.JTextArea;
+-import javax.swing.JTextField;
+-import javax.swing.border.Border;
+-
+-import com.darkdensity.setting.Config;
+-
+-public class ChatClient extends JFrame {
+-	// TODO: change the udp address, and other variable into config.java
+-	BufferedImage buffer = null;
+-	static ChatManager cm;
+-	static JTextField tf;
+-	static JTextArea tv;
+-	private int x = 0;
+-	private int y = 0;
+-	private final int width = 400;
+-	private final int height = 230;
+-
+-	public ChatClient() {
+-		cm = new ChatManager();
+-		JPanel jPanel = new JPanel();
+-		this.setContentPane(jPanel);
+-		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+-		tv = new JTextArea(10, 30);
+-		Border border = BorderFactory.createLineBorder(Color.BLACK, 1);
+-		tv.setBorder(border);
+-		tv.setBackground(Color.WHITE);
+-		tv.setEditable(false);
+-		this.add(tv);
+-		JLabel jl = new JLabel("Chat:");
+-		this.add(jl);
+-		tf = new JTextField(20);
+-		this.add(tf);
+-		JButton btnSend = new JButton("Send");
+-		btnSend.addActionListener(new ActionListener() {
+-			public void actionPerformed(ActionEvent e) {
+-				try {
+-					String message = tf.getText();
+-					if (!message.isEmpty()) {
+-						cm.sendMessage(Config.PLAYER_NAME + ": " + message);
+-					}
+-				} catch (Exception e1) {
+-					// TODO Auto-generated catch block
+-					e1.printStackTrace();
+-				}
+-			}
+-		});
+-
+-		this.add(btnSend);
+-		this.setSize(this.width, this.height);
+-
+-		Runnable r = new Runnable() {
+-			public void run() {
+-				receiveMessage();
+-			};
+-		};
+-		new Thread(r).start();
+-
+-	}
+-
+-	public static void receiveMessage() {
+-		while (true) {
+-			try {
+-				String s = cm.receiveMessage();
+-				tv.append(s + "\n"); // TODO: Change to dynamic user name after
+-										// implementing mult-player game
+-				tf.setText("");
+-			} catch (Exception e) {
+-				// TODO Auto-generated catch block
+-				if(Config.DEBUGMODE){e.printStackTrace();}
+-			}
+-		}
+-	}
+-
+-	public void redraw() {
+-		this.getParent().add(this);
+-		this.setVisible(true);
+-
+-	}
+-}
+Index: src/com/darkdensity/core/GameManager.java
+===================================================================
+--- src/com/darkdensity/core/GameManager.java	(revision 90)
++++ src/com/darkdensity/core/GameManager.java	(working copy)
+@@ -16,7 +16,7 @@
+ import com.darkdensity.gui.MiniMapPanel;
+ import com.darkdensity.gui.TestSpritePanel;
+ import com.darkdensity.maprender.Map;
+-import com.darkdensity.net.chat.ChatClient;
++import com.darkdensity.net.chat.ChatPanel;
+ import com.darkdensity.setting.Config;
+ import com.darkdensity.tile.Animation;
+ import com.darkdensity.tile.Sprite;
+@@ -30,7 +30,7 @@
+ 	// private map map = new map();
+ 	private Map map = new Map("BigMap");
+ 	private MiniMapPanel miniMapPanel;
+-	private ChatClient chatClientPanel;
++	private ChatPanel chatClientPanel;
+ 	private TestSpritePanel testSpritePanel;
+ 	private Player player; // solo mode
+ 	private ArrayList<Command> gameCommandList;
+@@ -74,7 +74,7 @@
+ 		
+ 		
+ 
+-		this.chatClientPanel = new ChatClient();
++		this.chatClientPanel = new ChatPanel();
+ 		// TODO: TO fix full screen bug
+ 		// this.chatClientPanel.setLocation(this.getWidth()-chatClientPanel.getWidth(),
+ 		// this.getHeight() - chatClientPanel.getHeight());

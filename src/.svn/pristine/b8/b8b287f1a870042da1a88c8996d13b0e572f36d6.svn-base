@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_Ku6l8LPBEeOdEasZtwWdyA">
+  <name xsi:nil="true"/>
+  <elementImport xmi:id="_Kw7_MLPBEeOdEasZtwWdyA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_KxHlYLPBEeOdEasZtwWdyA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_Ku7NALPBEeOdEasZtwWdyA" name="com">
+    <packagedElement xmi:type="uml:Package" xmi:id="_Ku7NAbPBEeOdEasZtwWdyA" name="darkdensity">
+      <packagedElement xmi:type="uml:Package" xmi:id="_Ku7NArPBEeOdEasZtwWdyA" name="factory">
+        <packagedElement xmi:type="uml:Class" xmi:id="_Ku7NA7PBEeOdEasZtwWdyA" name="CommandFactory">
+          <ownedAttribute xmi:id="_Kv6EcLPBEeOdEasZtwWdyA" name="gameWorld" visibility="protected" type="_KvyIp7PBEeOdEasZtwWdyA"/>
+          <ownedAttribute xmi:id="_Kv9u0LPBEeOdEasZtwWdyA" name="tileManager" visibility="protected" type="_KvyIqLPBEeOdEasZtwWdyA"/>
+          <ownedAttribute xmi:id="_KwBZMLPBEeOdEasZtwWdyA" name="focusManager" visibility="protected" type="_KvyIprPBEeOdEasZtwWdyA"/>
+          <ownedAttribute xmi:id="_KwFDkLPBEeOdEasZtwWdyA" name="gridMap" visibility="protected" type="_KvyvsbPBEeOdEasZtwWdyA"/>
+          <ownedAttribute xmi:id="_KwJVALPBEeOdEasZtwWdyA" name="commandPool" visibility="private" type="_KvyIpbPBEeOdEasZtwWdyA"/>
+          <ownedAttribute xmi:id="_KwxnILPBEeOdEasZtwWdyA" name="commandData" visibility="protected" type="_Kwvx8LPBEeOdEasZtwWdyA"/>
+          <ownedOperation xmi:id="_KwzcULPBEeOdEasZtwWdyA" name="setCommandData" visibility="public">
+            <ownedParameter xmi:id="_KwzcUbPBEeOdEasZtwWdyA" name="commandData" type="_KvyIoLPBEeOdEasZtwWdyA"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_Kw14kLPBEeOdEasZtwWdyA" name="setBarricadeDirection" visibility="public">
+            <ownedParameter xmi:id="_Kw14kbPBEeOdEasZtwWdyA" name="barricadeDirection" type="_KvyvubPBEeOdEasZtwWdyA"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_Kw3twLPBEeOdEasZtwWdyA" name="setGameWorld" visibility="public">
+            <ownedParameter xmi:id="_Kw3twbPBEeOdEasZtwWdyA" name="gameWorld" type="_KvyIp7PBEeOdEasZtwWdyA"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_Kw5i8LPBEeOdEasZtwWdyA" name="setPlayerRole" visibility="public">
+            <ownedParameter xmi:id="_Kw5i8bPBEeOdEasZtwWdyA" name="playerRole" type="_KvyvurPBEeOdEasZtwWdyA"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_Kw7_MbPBEeOdEasZtwWdyA" name="setTileName" visibility="public">
+            <ownedParameter xmi:id="_Kw7_MrPBEeOdEasZtwWdyA" name="tileName">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_Kw-bcLPBEeOdEasZtwWdyA" name="setCommandPool" visibility="public">
+            <ownedParameter xmi:id="_Kw-bcbPBEeOdEasZtwWdyA" name="commandPool" type="_KvyIpbPBEeOdEasZtwWdyA"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_KxA3sLPBEeOdEasZtwWdyA" name="setGridMap" visibility="public">
+            <ownedParameter xmi:id="_KxA3sbPBEeOdEasZtwWdyA" name="gridMap" type="_KvyvsbPBEeOdEasZtwWdyA"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_KxCs4LPBEeOdEasZtwWdyA" name="setFocusID" visibility="public">
+            <ownedParameter xmi:id="_KxCs4bPBEeOdEasZtwWdyA" name="focusID" type="_KvyIobPBEeOdEasZtwWdyA"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_KxFJILPBEeOdEasZtwWdyA" name="setTargetID" visibility="public">
+            <ownedParameter xmi:id="_KxFJIbPBEeOdEasZtwWdyA" name="targetID" type="_KvyIobPBEeOdEasZtwWdyA"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_KxHlYbPBEeOdEasZtwWdyA" name="setPointX" visibility="public">
+            <ownedParameter xmi:id="_KxHlYrPBEeOdEasZtwWdyA" name="pointX">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_KxKBoLPBEeOdEasZtwWdyA" name="setPointY" visibility="public">
+            <ownedParameter xmi:id="_KxKBobPBEeOdEasZtwWdyA" name="pointY">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_KxL20LPBEeOdEasZtwWdyA" name="setClassName" visibility="public">
+            <ownedParameter xmi:id="_KxL20bPBEeOdEasZtwWdyA" name="className">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_KxOTELPBEeOdEasZtwWdyA" name="setBuildingName" visibility="public">
+            <ownedParameter xmi:id="_KxOTEbPBEeOdEasZtwWdyA" name="buildingName">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_KxQvULPBEeOdEasZtwWdyA" name="setProgressUpdate" visibility="public">
+            <ownedParameter xmi:id="_KxQvUbPBEeOdEasZtwWdyA" name="n">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_KxTLkLPBEeOdEasZtwWdyA" name="setResourse" visibility="public">
+            <ownedParameter xmi:id="_KxTLkbPBEeOdEasZtwWdyA" name="food">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_KxTyoLPBEeOdEasZtwWdyA" name="wood">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_KxTyobPBEeOdEasZtwWdyA" name="iron">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_KxTyorPBEeOdEasZtwWdyA" name="survivor">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_KxVn0LPBEeOdEasZtwWdyA" name="pack" visibility="public">
+            <ownedParameter xmi:id="_KxVn0bPBEeOdEasZtwWdyA" name="senderName">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_KxVn0rPBEeOdEasZtwWdyA" name="return" type="_KvyvtLPBEeOdEasZtwWdyA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_KxYEELPBEeOdEasZtwWdyA" name="unpack" visibility="public">
+            <ownedParameter xmi:id="_KxYEEbPBEeOdEasZtwWdyA" name="packet" type="_KvyvtLPBEeOdEasZtwWdyA"/>
+            <ownedParameter xmi:id="_KxYEErPBEeOdEasZtwWdyA" name="return" type="_KvyIo7PBEeOdEasZtwWdyA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_KxagULPBEeOdEasZtwWdyA" name="createCommand" visibility="public">
+            <ownedParameter xmi:id="_KxagUbPBEeOdEasZtwWdyA" name="className">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_KxcVgLPBEeOdEasZtwWdyA" name="clear" visibility="private"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_KvyIorPBEeOdEasZtwWdyA" name="command">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_KvyIo7PBEeOdEasZtwWdyA" name="Command"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_KvyIpLPBEeOdEasZtwWdyA" name="core">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_KvyIpbPBEeOdEasZtwWdyA" name="CommandPool"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_KvyIprPBEeOdEasZtwWdyA" name="FocusManager"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_KvyIp7PBEeOdEasZtwWdyA" name="GameWorld"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_KvyIqLPBEeOdEasZtwWdyA" name="TileManager"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_KvyvsLPBEeOdEasZtwWdyA" name="maprender">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_KvyvsbPBEeOdEasZtwWdyA" name="GridMap"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_KvyvsrPBEeOdEasZtwWdyA" name="net">
+        <packagedElement xmi:type="uml:Package" xmi:id="_Kvyvs7PBEeOdEasZtwWdyA" name="core">
+          <packagedElement xmi:type="uml:DataType" xmi:id="_KvyvtLPBEeOdEasZtwWdyA" name="Packet"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_KvyvtbPBEeOdEasZtwWdyA" name="setting">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_KvyvtrPBEeOdEasZtwWdyA" name="Config"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_Kvyvt7PBEeOdEasZtwWdyA" name="Constant"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_KvyvuLPBEeOdEasZtwWdyA" name="Constant">
+          <packagedElement xmi:type="uml:DataType" xmi:id="_KvyvubPBEeOdEasZtwWdyA" name="BarricadeDirection"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_KvyvurPBEeOdEasZtwWdyA" name="PlayerRole"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_KvxhkLPBEeOdEasZtwWdyA" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_KvxhkbPBEeOdEasZtwWdyA" name="util">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_KvyIoLPBEeOdEasZtwWdyA" name="HashMap"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_KvyIobPBEeOdEasZtwWdyA" name="UUID"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_Kwvx8LPBEeOdEasZtwWdyA" name="HashMap&lt;String,Object>"/>
+</uml:Model>
